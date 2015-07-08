@@ -84,6 +84,107 @@ symptomsChart.width(640)
 
 var countChart = dc.dataCount('#dataCount').dimension(dataset).group(all);
 
+// Time series chart
+
+var timeChart = dc.lineChart("#timeSeries");
+
+//worldcup_data.forEach(function(d){
+//  d["Date of Report"] = new Date(Date.parse(d["Date of Report"]));
+//  //d3.time.format("%m/%d/%Y %I:%M").parse(d["Date of Report"]);
+//  //console.log(d["Date of Report"])
+//  symptoms = ["Fever","Cough","Sore Throat","Shortness of Breath","Nausea,Diarrhea",
+//    "Joint Pain","Headache","Bleeding","Rash"];
+//  d["symptoms"] = [];
+//  for (val in symptoms){
+//    if(d[symptoms[val]] == "1"){
+//      d["symptoms"].push(symptoms[val]);
+//      // console.log(d["symptoms"]);
+//    }
+//  }
+//
+//});
+
+var volumeByHour = dataset.dimension(function(d) {
+  return d3.time.day(new Date(d.ill_date));
+});
+
+var volumeByHourGroup = volumeByHour.group().reduceCount(function(d) {
+  return d.ill_date;
+});
+
+timeChart.width(1000)
+  .height(200)
+  .margins({top: 10, right: 10, bottom: 20, left: 40})
+  .dimension(volumeByHour)
+  .group(volumeByHourGroup)
+  .transitionDuration(500)
+  .elasticY(true)
+  .x(d3.time.scale()) //x(d3.time.scale().domain([new Date(2014, 1, 1), new Date(2014, 12, 31)]))
+  .elasticX(true)
+  .xAxis();
+
+// var symptomsChart = dc.rowChart('#symptomsChart');
+
+// var reduceAdd = function(p, v) {
+//   v.symptoms.forEach (function(val, idx) {
+//     p[val] = (p[val] || 0) + 1;
+//   });
+//   return p;
+// }
+
+// var reduceRemove = function(p, v) {
+//   v.symptoms.forEach (function(val, idx) {
+//     p[val] = (p[val] || 0) - 1;
+//   });
+//   return p;
+
+// }
+
+// var reduceInitial = function() {
+//   return {};
+// }
+
+// var symptoms = dataset.dimension(function (d) {
+//   return d.symptoms; });
+// var symptomsGroup = symptoms.groupAll().reduce(reduceAdd, reduceRemove, reduceInitial).value();
+
+// // Hack from http://stackoverflow.com/a/17529113/12791
+// symptomsGroup.all = function() {
+//   var newObject = [];
+//   for (var key in this) {
+//     if (this.hasOwnProperty(key) && key != "all") {
+//       newObject.push({
+//         key: key,
+//         value: this[key]
+//       });
+//     }
+//   }
+//   return newObject;
+// }
+
+// symptomsChart.width(1000)
+//   .height(200)
+//   .margins({top: 20, left: 10, right: 10, bottom: 20})
+//   .group(symptomsGroup)
+//   .dimension(symptoms)
+//   .filterHandler(function(dimension, filter){
+//     dimension.filter(function(d) { return filter != null ? _.some(d, function(s) { return _.contains(filter, s) }) : true;});
+//     return filter;
+//   })
+//   .elasticX(true)
+//   .label(function (d) {
+//     return d.key;
+//   })
+//   .title(function (d) {
+//     return d.value;
+//   });
+
+
+
+// Data count widget
+
+//var countChart = dc.dataCount('#dataCount').dimension(crossfiltered).groupAll();
+
 
 // Go!
 

@@ -4,7 +4,8 @@
   "dependencies": {
     "bootstrap": "~3.3.5",
     "modernizr": "~2.8.3",
-    "dcjs": "~1.7.3"
+    "dcjs": "~1.7.3",
+    "underscore": "~1.8.3"
   },
   "overrides": {
     "bootstrap": {

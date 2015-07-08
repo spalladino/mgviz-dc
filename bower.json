@@ -5,7 +5,9 @@
     "bootstrap": "~3.3.5",
     "modernizr": "~2.8.3",
     "dcjs": "~1.7.3",
-    "underscore": "~1.8.3"
+    "underscore": "~1.8.3",
+    "leaflet": "~0.7.3",
+    "d3-tip": "~0.6.7"
   },
   "overrides": {
     "bootstrap": {

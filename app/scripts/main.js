@@ -8,6 +8,14 @@ _.each(data, function(d) {
 });
 
 
+var labels = {
+  bleeding: "Bleeding",
+  body_aches: "Body aches",
+  cough: "Cough",
+  fever: "Fever",
+  headache: "Headache"
+};
+
 // Initialise dataset
 
 var dataset = crossfilter(data);
@@ -63,7 +71,7 @@ symptomsChart.width(640)
     return filter;
    })
   .label(function (d) {
-    return d.key;
+    return labels[d.key];
   })
   .title(function (d) {
     return d.value

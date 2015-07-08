@@ -4,27 +4,35 @@ var data = [{"user":"558c5fe40b5b308d5591cf48","household":"Me","symptoms":"feve
 
 var symptomsChart = dc.rowChart('#symptomsChart');
 
-var ndx = crossfilter(data);
-var all = ndx.groupAll();
+var dataset = crossfilter(data);
+var all = dataset.groupAll();
 
-var symptoms = ndx.dimension(function (d) {
+var symptoms = dataset.dimension(function (d) {
   return d.symptoms.split(',');
 });
 var symptomsGroup = symptoms.group();
+
 
 
 symptomsChart.width(640)
   .height(480)
   .margins({top: 20, left: 10, right: 10, bottom: 20})
   .group(symptomsGroup)
-  .dimension(symptoms);
+  .dimension(symptoms)
   .label(function (d) {
     return d.key;
   })
   .title(function (d) {
     return d.value
   })
-  .elasticX(true)
-  .xAxis.ticks(1);
+  .elasticX(true);
 
 dc.renderAll();
+
+
+
+// var symptomsDimension = dataset.dimension(function(d) { return d.symptoms; });
+// var filtered = symptomsDimension.filter("fever,cough");
+// console.log(data.length);
+// console.log(dataset.size());
+// console.log(filtered.top(100));

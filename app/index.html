@@ -44,21 +44,74 @@
         <p>Dashboard for participatory surveillance data.</p>
       </div>
 
-      <div class="row">
 
-      <div id='dataCount'>
-        <span class='filter-count'></span> selected out of <span class='total-count'></span> records
-      </div>
-      <br/>
-      <div id="timeSeries"></div>
-      <div id="timeNavigation"></div>
-      <div id="symptomsChart"></div>
+      <ul id="datasetTabs" class="nav nav-tabs" role="tablist">
+        <li role="presentation"><a href="#syndromes" id="syndromesTab" role="tab" data-toggle="syndromes">Syndromes</a></li>
+        <li role="presentation"><a href="#symptoms" id="symptomsTab" role="tab" data-toggle="symptoms">Symptoms</a></li>
+      </ul>
+
+
+
+      <div class="tab-content">
+
+
+        <div role="tabpanel" class="tab-pane" id="syndromes">
+          <div class="row">
+            <div id='syndromesCount'>
+              Viewing <span class='filter-count'></span> cases out of <span class='total-count'></span> total syndromes cases
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4" id="syndromesChart"></div>
+            <div id="syndromesMap" class="map col-md-8"></div>
+          </div>
+          <div class="row">
+            <div id="syndromesTimeSeries"></div>
+            <div id="syndromesTimeNavigation"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div id="syndromesAgeChart"></div>
+            </div>
+            <div class="col-md-6">
+              <div id="syndromesGenderChart"></div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div role="tabpanel" class="tab-pane" id="symptoms">
+          <div class="row">
+            <div id='symptomsCount'>
+              Viewing <span class='filter-count'></span> cases out of <span class='total-count'></span> total symptoms cases
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4" id="symptomsChart"></div>
+            <div id="symptomsMap" class="map col-md-8"></div>
+          </div>
+          <div class="row">
+            <div id="symptomsTimeSeries"></div>
+            <div id="symptomsTimeNavigation"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div id="symptomsAgeChart"></div>
+            </div>
+            <div class="col-md-6">
+              <div id="symptomsGenderChart"></div>
+            </div>
+          </div>
+        </div>
+
 
       </div>
 
       <div class="footer">
         <p>EpiHack Rio 2015</p>
       </div>
+
     </div>
 
 
@@ -73,7 +126,6 @@
     <script src="/bower_components/leaflet/dist/leaflet.js"></script>
     <script src="/bower_components/leaflet/dist/leaflet-src.js"></script>
     <script src="/bower_components/d3-tip/index.js"></script>
-    <script src="/bower_components/dc-addons/dist/dc-addons.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

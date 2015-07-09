@@ -63,7 +63,14 @@
         <div role="tabpanel" class="tab-pane" id="syndromes">
           <div class="row">
             <div id='syndromesCount'>
-              Viewing <span class='filter-count'></span> cases out of <span class='total-count'></span> total syndromes cases<span class="no-print"> | <a href="javascript:dc.filterAll(); dc.redrawAll();">Reset All Graphs</a> | <a href="javascript:exportSyndromes();">Export (.csv)</a></span>
+              <div class="col-md-6 text-left">
+              <a href="javascript:changeDate('thisweek', syndromesNavTimeChart)"> Current Week </a>|
+              <a href="javascript:changeDate('last24', syndromesNavTimeChart)"> Last 24 hours </a>|
+              <a href="javascript:changeDate('reset', syndromesNavTimeChart)"> All Time </a>
+              </div>
+              <div class="col-md-6 text-right">
+              Viewing <span class='filter-count'></span> cases out of <span class='total-count'></span> total syndromes cases<span class="no-print"> | <a href="javascript:dc.filterAll(); dc.redrawAll();">Reset All</a> | <a href="javascript:exportSyndromes();">Export (.csv)</a></span>
+              </div>
             </div>
           </div>
           <div class="row">
@@ -117,10 +124,18 @@
         <div role="tabpanel" class="tab-pane" id="symptoms">
           <div class="row">
             <div id='symptomsCount'>
-              Viewing <span class='filter-count'></span> cases out of <span class='total-count'></span> total symptoms cases<span class="no-print"> |  <a href="javascript:dc.filterAll(); dc.redrawAll();">Reset All Graphs</a> | <a href="javascript:exportSymptoms();">Export (.csv)</a></span>
+              <div class="col-md-6 text-left">
+              <a href="javascript:changeDate('thisweek', syndromesNavTimeChart)"> Current Week </a>|
+              <a href="javascript:changeDate('last24', syndromesNavTimeChart)"> Last 24 hours </a>|
+              <a href="javascript:changeDate('reset', syndromesNavTimeChart)"> All Time </a>
+              </div>
+              <div class="col-md-6 text-right">
+              Viewing <span class='filter-count'></span> cases out of <span class='total-count'></span> total symptoms cases<span class="no-print"> | <a href="javascript:dc.filterAll(); dc.redrawAll();">Reset All</a> | <a href="javascript:exportSyndromes();">Export (.csv)</a></span>
+              </div>
             </div>
           </div>
           <div class="row">
+            <div class="col-md-8">
             <div id="symptomsTimeSeries">
               <h4 class="text-center">
               number of cases over time
@@ -128,6 +143,11 @@
               </h4>
             </div>
             <div id="symptomsTimeNavigation"></div>
+            </div>
+            
+            <div class="col-md-4">
+            Test
+            </div>
           </div>
           <div class="row">
             <div class="col-md-4" id="symptomsChart">

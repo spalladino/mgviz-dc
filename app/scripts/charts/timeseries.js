@@ -40,18 +40,18 @@ var buildTimeChart = function(dataset, group, accessor, target, navigation, date
   var observed_symptoms = group.top(Infinity).map(function(obj){ return obj.key; });
 
   symptomsTimeChart
-    .width(1100)
+    .width(900)
     .height(300)
-    .margins({top: 10, right: 110, bottom: 20, left: 40})
+    .margins({top: 10, right: 120, bottom: 20, left: 40})
     .rangeChart(symptomsNavChart)
     .shareTitle(false)
     .transitionDuration(100)
     .elasticY(true)
-    .x(d3.time.scale().domain([new Date(2015, 5, 1), new Date(2015, 5, 19)]))
+    .x(d3.time.scale())
     .xUnits(d3.time.days)
     .xAxisLabel('date (' + precision[0] + ')') // (optional) render an axis label below the x axis
     .yAxisLabel('no. cases')
-    .xAxis()
+    .xAxis();
 
   var theLines = [];
   var colorsSymptoms = ["red", "green", "blue", "yellow", "black", "orange", "purple"];
@@ -66,35 +66,41 @@ var buildTimeChart = function(dataset, group, accessor, target, navigation, date
         .group(symptomGroupsTimeSeries, observed_symptoms[i], function(d){
           return d.value[field] || null;
         })
+        .defined(function(d){
+          return !isNaN(d.y)
+        })
         .interpolate("monotone")
     );
   });
 
-  symptomsTimeChart.compose(theLines).brushOn(false);
+  symptomsTimeChart
+  .compose(theLines)
+  .brushOn(false)
 
   symptomsTimeChart
     .rangeChart(symptomsNavChart)
     .transitionDuration(100)
     .elasticY(true)
     .x(d3.time.scale().domain([new Date(2015, 5, 1), new Date(2015, 5, 19)]))
-    .legend(dc.legend().x(1000).y(20).itemHeight(30).gap(10))
+    .legend(dc.legend().x(800).y(20).itemHeight(30).gap(10))
     .xUnits(d3.time.days)
     .xAxis()
 
-  return symptomsNavChart.width(1010)
+  symptomsNavChart.width(800)
     .height(60)
-    .margins({top: 10, right: 20, bottom: 20, left: 40})
+    .margins({top: 10, right: 20, bottom: 20, left: 50})
     .dimension(volumeByHour)
     .group(volumeByHourGroup)
     .centerBar(true)
     .gap(1)
-    //.elasticX(true)
-    .x(d3.time.scale().domain([new Date(2015, 5, 1), new Date(2015, 5, 19)]))
+    .elasticX(true)
+    .x(d3.time.scale().domain([new Date(2015, 5, 1), new Date(2015, 8, 30)]))
     .round(d3.time.days.round)
     .alwaysUseRounding(true)
     .xUnits(d3.time.days)
     .yAxis().ticks(0);
 
+  return symptomsTimeChart;
 
 /*
 
@@ -205,6 +211,6 @@ OLD STACKED CHARTS, DO NOT REMOVE AT THE MOMEN
 */
 };
 
-buildTimeChart(syndromesDataset, syndromesGroup, 'syndrome', '#syndromesTimeSeries', '#syndromesTimeNavigation', syndromesDateDimension);
-buildTimeChart(symptomsDataset, symptomsGroup, 'symptom', '#symptomsTimeSeries', '#symptomsTimeNavigation', symptomsDateDimension);
+var syndromesNavTimeChart = buildTimeChart(syndromesDataset, syndromesGroup, 'syndrome', '#syndromesTimeSeries', '#syndromesTimeNavigation', syndromesDateDimension);
+var symptomsNavTimeChart = buildTimeChart(symptomsDataset, symptomsGroup, 'symptom', '#symptomsTimeSeries', '#symptomsTimeNavigation', symptomsDateDimension);
 

@@ -67,7 +67,7 @@ body {
 }
 
 #syndromesCount, #symptomsCount {
-  float: right;
+/*  float: right;*/
   margin: 10px 30px;
 }
 

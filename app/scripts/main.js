@@ -6,7 +6,7 @@
 $('#datasetTabs a').click(function (e) {
   e.preventDefault()
   $(this).tab('show')
-}).first().click();
+}).first().tab('show');
 
 
 
@@ -49,8 +49,8 @@ var buildRowChart = function(target, dimension, group) {
     .elasticX(true);
 };
 
-var syndromesChart = buildRowChart('#syndromesChart', syndromesDimension, syndromesGroup);
-var symptomsChart = buildRowChart('#symptomsChart', symptomsDimension, symptomsGroup);
+var syndromesChart = buildRowChart('#syndromesChart', syndromesDimension, syndromesGroup, 'syndromes');
+var symptomsChart = buildRowChart('#symptomsChart', symptomsDimension, symptomsGroup, 'symptoms');
 
 
 // Data count widget
@@ -81,8 +81,8 @@ var buildTimeChart = function(target, dataset) {
     .xAxis();
 };
 
-var syndromesTimeSeries = buildTimeChart('#syndromesTimeSeries', syndromesDataset);
-var symptomsTimeSeries = buildTimeChart('#symptomsTimeSeries', symptomsDataset);
+var syndromesTimeSeries = buildTimeChart('#syndromesTimeSeries', syndromesDataset, 'syndromes');
+var symptomsTimeSeries = buildTimeChart('#symptomsTimeSeries', symptomsDataset, 'symptoms');
 
 
 // Demographic pie charts
@@ -101,8 +101,8 @@ var buildDemographicPieChart = function(target, dataset, variable) {
     .group(group);
 };
 
-buildDemographicPieChart('#syndromesGenderChart', syndromesDataset, 'gender');
-buildDemographicPieChart('#symptomsGenderChart', symptomsDataset, 'gender');
+buildDemographicPieChart('#syndromesGenderChart', syndromesDataset, 'gender', 'syndromes');
+buildDemographicPieChart('#symptomsGenderChart', symptomsDataset, 'gender', 'symptoms');
 
 
 
@@ -110,14 +110,6 @@ buildDemographicPieChart('#symptomsGenderChart', symptomsDataset, 'gender');
 
 var ageSteps = [10,20,30,40,50,60];
 var buildAgeChart = function(target, dataset) {
-  // var dimension = dataset.dimension(function(d) {
-  //   return _.findIndex(ageSteps, function(step) {
-  //     d.age <= step;
-  //   });
-  // })
-
-  // var group = dimension.group();
-
   var dimension = dataset.dimension(function(d) {
     return d.age;
   });
@@ -144,17 +136,28 @@ var buildAgeChart = function(target, dataset) {
         return "> " + String(ageSteps[ageSteps.length-1]);
       }
     });
-    // .label(function(index) {
-    //   if (index) {
-    //     return String(ageSteps[index-1]) + "-" + String(ageSteps[index]);
-    //   } else {
-    //     return String(ageSteps[ageSteps.length-1]) + "+";
-    //   }
-    // // });
 };
 
-buildAgeChart('#syndromesAgeChart', syndromesDataset);
-buildAgeChart('#symptomsAgeChart', symptomsDataset);
+buildAgeChart('#syndromesAgeChart', syndromesDataset, 'syndromes');
+buildAgeChart('#symptomsAgeChart', symptomsDataset, 'symptoms');
+
+
+
+// Alerts management
+
+var setFilters = function(filters) {
+  if (filters.syndrome) {
+    syndromesChart.filter(filters.syndrome);
+    dc.redrawAll();
+    $('#syndromesTab').tab('show');
+  } else if (filters.symptom) {
+    symptomsChart.filter(filters.symptom);
+    dc.redrawAll();
+    $('#symptomsTab').tab('show');
+  }
+};
+
+
 
 // Go!
 

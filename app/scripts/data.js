@@ -50,11 +50,19 @@ var allSymptoms = symptomsDataset.groupAll();
 var syndromesDataset = crossfilter(syndromesCases);
 var allSyndromes = syndromesDataset.groupAll();
 
+
 var symptomsDimension = symptomsDataset.dimension(function (d) { return d.symptom; });
 var symptomsGroup = symptomsDimension.group();
 
+var symptomsDateDimension = symptomsDataset.dimension(function (d) { return new Date(d.date_onset); });
+
+
 var syndromesDimension = syndromesDataset.dimension(function (d) { return d.syndrome; });
 var syndromesGroup = syndromesDimension.group();
+
+var syndromesDateDimension = syndromesDataset.dimension(function(d) { return new Date(d.date_onset); });
+
+
 
 
 function exportSymptoms() {
@@ -86,7 +94,7 @@ function exportData(data, type) {
     var fileName = "data-" + type + ".csv";
     var buffer = csvData.join("\n");
     var blob = new Blob([buffer], {
-      "type": "text/csv;charset=utf8;"			
+      "type": "text/csv;charset=utf8;"
     });
     var link = document.createElement("a");
     if(link.download !== undefined) { // feature detection

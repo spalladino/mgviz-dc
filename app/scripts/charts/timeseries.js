@@ -102,10 +102,12 @@ var buildTimeChart = function(dataset, group, accessor, target, navigation) {
 
   //This hack is terrible but dives into d3 to find the area entities in the
   //svg and makes them clickable.
-  symptomsTimeChart.on('renderlet.timechart', function(chart, filter) {
-      chart.selectAll("path.area").on("click.timechart", (
+  symptomsTimeChart.on('renderlet.timechart.' + accessor, function(chart, filter) {
+      chart.selectAll("path.area").on("click.timechart" + accessor, (
         function(d) {
-          symptomsChart.filter([d.name]);
+          console.log("wtf");
+          console.log(d);
+          window[accessor+ "sChart"].filter([d.name]);
           dc.redrawAll();
         }
       ));

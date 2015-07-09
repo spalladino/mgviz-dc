@@ -62,12 +62,15 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-4" id="syndromesChart"></div>
-            <div id="syndromesMap" class="map col-md-8"></div>
+            <a href="javascript:dc.filterAll(); dc.renderAll();">Reset All Graphs</a>
           </div>
           <div class="row">
             <div id="syndromesTimeSeries"></div>
             <div id="syndromesTimeNavigation"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-4" id="syndromesChart"></div>
+            <div id="syndromesMap" class="map col-md-8"></div>
           </div>
           <div class="row">
             <div class="col-md-6">
@@ -86,6 +89,9 @@
             <div id='symptomsCount'>
               Viewing <span class='filter-count'></span> cases out of <span class='total-count'></span> total symptoms cases
             </div>
+          </div>
+          <div class="row">
+            <a href="javascript:dc.filterAll(); dc.renderAll();">Reset All Graphs</a>
           </div>
           <div class="row">
             <div id="symptomsTimeSeries"></div>

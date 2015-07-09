@@ -21,4 +21,4 @@ function changeDate(timeFrame, chart){
   }
 }
 
-var classesColorScale = d3.scale.category20();
+var classesColorScale = d3.scale.category10();

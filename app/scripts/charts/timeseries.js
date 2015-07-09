@@ -1,6 +1,5 @@
 // Time series chart
 
-<<<<<<< HEAD
 //title - dynamic - "Number of x(syndrome) between x(Date) and y(date)"
 //axes labels
 //histogram button

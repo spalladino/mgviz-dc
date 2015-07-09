@@ -21,8 +21,5 @@ var buildTable = function(dataset, accessor, dateDimension, target) {
     ]);
 };
 
-var syndromesDateDimension = "day";
-var symptomsDateDimension = "day";
-
 buildTable(syndromesDataset, 'syndrome', syndromesDateDimension, '#syndromesCaseList');
 buildTable(symptomsDataset, 'symptom', symptomsDateDimension, '#symptomsCaseList');

@@ -1,0 +1,1136 @@
+[
+  {
+    "user_id": "194",
+    "date_onset": "2014-05-30",
+    "date_reported": "2014-05-30",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "41",
+    "gender": "male",
+    "city": "Brasilia",
+    "region": "A.P. 1.0",
+    "foreigner": "0",
+    "role": "Worker",
+    "syndrome": "Exantemática"
+  },
+  {
+    "user_id": "203",
+    "date_onset": "2014-06-13",
+    "date_reported": "2014-06-13",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "34",
+    "gender": "male",
+    "city": "Brasilia",
+    "region": "A.P. 3.2",
+    "foreigner": "1",
+    "role": "Fan",
+    "syndrome": "Diarreica"
+  },
+  {
+    "user_id": "243",
+    "date_onset": "2014-06-10",
+    "date_reported": "2014-06-10",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "29",
+    "gender": "female",
+    "city": "Brasilia",
+    "region": "A.P. 5.2",
+    "foreigner": "1",
+    "role": "Worker",
+    "syndrome": "Respiratória"
+  },
+  {
+    "user_id": "396",
+    "date_onset": "2014-05-30",
+    "date_reported": "2014-05-30",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "35",
+    "gender": "male",
+    "city": "Ipojuca",
+    "region": "A.P. 4.0",
+    "foreigner": "1",
+    "role": "Fan",
+    "syndrome": "Diarreica"
+  },
+  {
+    "user_id": "854",
+    "date_onset": "2014-05-29",
+    "date_reported": "2014-05-29",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "21",
+    "gender": "male",
+    "city": "Recife",
+    "region": "A.P. 3.1",
+    "foreigner": "0",
+    "role": "Fan",
+    "syndrome": "Respiratória"
+  },
+  {
+    "user_id": "1160",
+    "date_onset": "2014-06-23",
+    "date_reported": "2014-06-23",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "23",
+    "gender": "male",
+    "city": "Salvador",
+    "region": "A.P. 5.3",
+    "foreigner": "0",
+    "role": "Fan",
+    "syndrome": "Exantemática"
+  },
+  {
+    "user_id": "1600",
+    "date_onset": "2014-06-23",
+    "date_reported": "2014-06-23",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "38",
+    "gender": "female",
+    "city": "Praia Grande",
+    "region": "A.P. 2.2",
+    "foreigner": "0",
+    "role": "Fan",
+    "syndrome": "Exantemática"
+  },
+  {
+    "user_id": "1682",
+    "date_onset": "2014-05-30",
+    "date_reported": "2014-05-30",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "64",
+    "gender": "female",
+    "city": "Rio de Janeiro",
+    "region": "A.P. 3.3",
+    "foreigner": "0",
+    "role": "Fan",
+    "syndrome": "Respiratória"
+  },
+  {
+    "user_id": "1702",
+    "date_onset": "2014-06-07",
+    "date_reported": "2014-06-07",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "38",
+    "gender": "female",
+    "city": "São Gonçalo",
+    "region": "A.P. 5.1",
+    "foreigner": "1",
+    "role": "Fan",
+    "syndrome": "Exantemática"
+  },
+  {
+    "user_id": "1790",
+    "date_onset": "2014-05-30",
+    "date_reported": "2014-05-30",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "46",
+    "gender": "female",
+    "city": "Brasilia",
+    "region": "A.P. 5.3",
+    "foreigner": "1",
+    "role": "Fan",
+    "syndrome": "Respiratória"
+  },
+  {
+    "user_id": "1794",
+    "date_onset": "2014-05-30",
+    "date_reported": "2014-05-30",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "34",
+    "gender": "male",
+    "city": "Recife",
+    "region": "A.P. 3.3",
+    "foreigner": "1",
+    "role": "Worker",
+    "syndrome": "Respiratória"
+  },
+  {
+    "user_id": "1830",
+    "date_onset": "2014-05-31",
+    "date_reported": "2014-05-31",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "24",
+    "gender": "female",
+    "city": "",
+    "region": "A.P. 3.2",
+    "foreigner": "1",
+    "role": "Worker",
+    "syndrome": "Respiratória"
+  },
+  {
+    "user_id": "1881",
+    "date_onset": "2014-06-01",
+    "date_reported": "2014-06-01",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "39",
+    "gender": "female",
+    "city": "Rio das Ostras",
+    "region": "A.P. 1.0",
+    "foreigner": "0",
+    "role": "Fan",
+    "syndrome": "Respiratória"
+  },
+  {
+    "user_id": "2326",
+    "date_onset": "2014-06-02",
+    "date_reported": "2014-06-02",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "20",
+    "gender": "female",
+    "city": "Guarulhos",
+    "region": "A.P. 5.3",
+    "foreigner": "1",
+    "role": "Fan",
+    "syndrome": "Exantemática"
+  },
+  {
+    "user_id": "2427",
+    "date_onset": "2014-05-30",
+    "date_reported": "2014-05-30",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "49",
+    "gender": "female",
+    "city": "Santa Cruz do Capibaribe",
+    "region": "A.P. 5.1",
+    "foreigner": "1",
+    "role": "Athlete",
+    "syndrome": "Exantemática"
+  },
+  {
+    "user_id": "2445",
+    "date_onset": "2014-05-30",
+    "date_reported": "2014-05-30",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "37",
+    "gender": "male",
+    "city": "Carapicuíba",
+    "region": "A.P. 5.2",
+    "foreigner": "1",
+    "role": "Fan",
+    "syndrome": "Respiratória"
+  },
+  {
+    "user_id": "2471",
+    "date_onset": "2014-05-30",
+    "date_reported": "2014-05-30",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "39",
+    "gender": "male",
+    "city": "Natividade",
+    "region": "A.P. 2.2",
+    "foreigner": "1",
+    "role": "Fan",
+    "syndrome": "Exantemática"
+  },
+  {
+    "user_id": "2493",
+    "date_onset": "2014-05-30",
+    "date_reported": "2014-05-30",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "56",
+    "gender": "male",
+    "city": "Jaboatão dos Guararapes",
+    "region": "A.P. 3.1",
+    "foreigner": "1",
+    "role": "Fan",
+    "syndrome": "Respiratória"
+  },
+  {
+    "user_id": "2506",
+    "date_onset": "2014-05-30",
+    "date_reported": "2014-05-30",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "62",
+    "gender": "female",
+    "city": "São José dos Campos",
+    "region": "A.P. 4.0",
+    "foreigner": "0",
+    "role": "Fan",
+    "syndrome": "Respiratória"
+  },
+  {
+    "user_id": "2749",
+    "date_onset": "2014-07-05",
+    "date_reported": "2014-07-05",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "27",
+    "gender": "male",
+    "city": "Brasilia",
+    "region": "A.P. 2.2",
+    "foreigner": "1",
+    "role": "Worker",
+    "syndrome": "Respiratória"
+  },
+  {
+    "user_id": "2853",
+    "date_onset": "2014-06-25",
+    "date_reported": "2014-06-25",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "21",
+    "gender": "male",
+    "city": "Várzea Grande",
+    "region": "A.P. 3.1",
+    "foreigner": "0",
+    "role": "Fan",
+    "syndrome": "Exantemática"
+  },
+  {
+    "user_id": "2945",
+    "date_onset": "2014-05-30",
+    "date_reported": "2014-05-30",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "26",
+    "gender": "male",
+    "city": "Manaus",
+    "region": "A.P. 1.0",
+    "foreigner": "0",
+    "role": "Fan",
+    "syndrome": "Respiratória"
+  },
+  {
+    "user_id": "3254",
+    "date_onset": "2014-05-30",
+    "date_reported": "2014-05-30",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "46",
+    "gender": "male",
+    "city": "Uruana",
+    "region": "A.P. 2.1",
+    "foreigner": "0",
+    "role": "Fan",
+    "syndrome": "Exantemática"
+  },
+  {
+    "user_id": "3295",
+    "date_onset": "2014-05-30",
+    "date_reported": "2014-05-30",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "27",
+    "gender": "male",
+    "city": "Bombinhas",
+    "region": "A.P. 1.0",
+    "foreigner": "0",
+    "role": "Fan",
+    "syndrome": "Diarreica"
+  },
+  {
+    "user_id": "3391",
+    "date_onset": "2014-05-31",
+    "date_reported": "2014-05-31",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "20",
+    "gender": "female",
+    "city": "Porto Velho",
+    "region": "A.P. 5.1",
+    "foreigner": "1",
+    "role": "Fan",
+    "syndrome": "Exantemática"
+  },
+  {
+    "user_id": "3619",
+    "date_onset": "2014-07-12",
+    "date_reported": "2014-07-12",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "25",
+    "gender": "female",
+    "city": "Sirinhaém",
+    "region": "A.P. 3.3",
+    "foreigner": "0",
+    "role": "Athlete",
+    "syndrome": "Respiratória"
+  },
+  {
+    "user_id": "3709",
+    "date_onset": "2014-05-30",
+    "date_reported": "2014-05-30",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "38",
+    "gender": "female",
+    "city": "Maceió",
+    "region": "A.P. 5.1",
+    "foreigner": "1",
+    "role": "Fan",
+    "syndrome": "Respiratória"
+  },
+  {
+    "user_id": "3739",
+    "date_onset": "2014-05-30",
+    "date_reported": "2014-05-30",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "35",
+    "gender": "female",
+    "city": "Altamira",
+    "region": "A.P. 3.1",
+    "foreigner": "0",
+    "role": "Worker",
+    "syndrome": "Diarreica"
+  },
+  {
+    "user_id": "3868",
+    "date_onset": "2014-05-30",
+    "date_reported": "2014-05-30",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "62",
+    "gender": "male",
+    "city": "Campinas",
+    "region": "A.P. 3.3",
+    "foreigner": "0",
+    "role": "Fan",
+    "syndrome": "Exantemática"
+  },
+  {
+    "user_id": "4001",
+    "date_onset": "2014-05-30",
+    "date_reported": "2014-05-30",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "48",
+    "gender": "female",
+    "city": "Barbacena",
+    "region": "A.P. 2.1",
+    "foreigner": "0",
+    "role": "Fan",
+    "syndrome": "Exantemática"
+  },
+  {
+    "user_id": "4061",
+    "date_onset": "2014-06-06",
+    "date_reported": "2014-06-06",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "22",
+    "gender": "female",
+    "city": "Ibicoara",
+    "region": "A.P. 2.1",
+    "foreigner": "0",
+    "role": "Fan",
+    "syndrome": "Exantemática"
+  },
+  {
+    "user_id": "4176",
+    "date_onset": "2014-05-30",
+    "date_reported": "2014-05-30",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "33",
+    "gender": "male",
+    "city": "Goiânia",
+    "region": "A.P. 1.0",
+    "foreigner": "1",
+    "role": "Fan",
+    "syndrome": "Respiratória"
+  },
+  {
+    "user_id": "4325",
+    "date_onset": "2014-05-30",
+    "date_reported": "2014-05-30",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "53",
+    "gender": "female",
+    "city": "Greater London",
+    "region": "A.P. 3.2",
+    "foreigner": "1",
+    "role": "Fan",
+    "syndrome": "Exantemática"
+  },
+  {
+    "user_id": "4400",
+    "date_onset": "2014-06-13",
+    "date_reported": "2014-06-13",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "37",
+    "gender": "female",
+    "city": "São Paulo",
+    "region": "A.P. 2.2",
+    "foreigner": "1",
+    "role": "Fan",
+    "syndrome": "Respiratória"
+  },
+  {
+    "user_id": "4487",
+    "date_onset": "2014-06-02",
+    "date_reported": "2014-06-02",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "47",
+    "gender": "male",
+    "city": "São Paulo",
+    "region": "A.P. 2.1",
+    "foreigner": "0",
+    "role": "Fan",
+    "syndrome": "Diarreica"
+  },
+  {
+    "user_id": "4510",
+    "date_onset": "2014-05-30",
+    "date_reported": "2014-05-30",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "20",
+    "gender": "female",
+    "city": "Guarulhos",
+    "region": "A.P. 2.1",
+    "foreigner": "1",
+    "role": "Worker",
+    "syndrome": "Exantemática"
+  },
+  {
+    "user_id": "4543",
+    "date_onset": "2014-05-30",
+    "date_reported": "2014-05-30",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "24",
+    "gender": "male",
+    "city": "Taboão da Serra",
+    "region": "A.P. 3.3",
+    "foreigner": "1",
+    "role": "Fan",
+    "syndrome": "Diarreica"
+  },
+  {
+    "user_id": "4668",
+    "date_onset": "2014-05-31",
+    "date_reported": "2014-05-31",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "33",
+    "gender": "female",
+    "city": "",
+    "region": "A.P. 3.3",
+    "foreigner": "1",
+    "role": "Fan",
+    "syndrome": "Exantemática"
+  },
+  {
+    "user_id": "4791",
+    "date_onset": "2014-05-31",
+    "date_reported": "2014-05-31",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "28",
+    "gender": "female",
+    "city": "",
+    "region": "A.P. 5.2",
+    "foreigner": "0",
+    "role": "Fan",
+    "syndrome": "Exantemática"
+  },
+  {
+    "user_id": "4903",
+    "date_onset": "2014-06-01",
+    "date_reported": "2014-06-01",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "42",
+    "gender": "female",
+    "city": "Rio de Janeiro",
+    "region": "A.P. 3.2",
+    "foreigner": "1",
+    "role": "Athlete",
+    "syndrome": "Respiratória"
+  },
+  {
+    "user_id": "5264",
+    "date_onset": "2014-06-04",
+    "date_reported": "2014-06-04",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "26",
+    "gender": "male",
+    "city": "Praia Grande",
+    "region": "A.P. 1.0",
+    "foreigner": "0",
+    "role": "Fan",
+    "syndrome": "Diarreica"
+  },
+  {
+    "user_id": "5509",
+    "date_onset": "2014-06-02",
+    "date_reported": "2014-06-02",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "34",
+    "gender": "male",
+    "city": "João Pessoa",
+    "region": "A.P. 5.2",
+    "foreigner": "1",
+    "role": "Fan",
+    "syndrome": "Respiratória"
+  },
+  {
+    "user_id": "5550",
+    "date_onset": "2014-06-02",
+    "date_reported": "2014-06-02",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "24",
+    "gender": "female",
+    "city": "Anápolis",
+    "region": "A.P. 1.0",
+    "foreigner": "1",
+    "role": "Fan",
+    "syndrome": "Respiratória"
+  },
+  {
+    "user_id": "5614",
+    "date_onset": "2014-06-12",
+    "date_reported": "2014-06-12",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "21",
+    "gender": "female",
+    "city": "Aracaju",
+    "region": "A.P. 3.1",
+    "foreigner": "0",
+    "role": "Fan",
+    "syndrome": "Respiratória"
+  },
+  {
+    "user_id": "5628",
+    "date_onset": "2014-06-02",
+    "date_reported": "2014-06-02",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "46",
+    "gender": "male",
+    "city": "Salvador",
+    "region": "A.P. 3.3",
+    "foreigner": "1",
+    "role": "Fan",
+    "syndrome": "Respiratória"
+  },
+  {
+    "user_id": "5649",
+    "date_onset": "2014-06-02",
+    "date_reported": "2014-06-02",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "51",
+    "gender": "male",
+    "city": "Água Fria",
+    "region": "A.P. 4.0",
+    "foreigner": "1",
+    "role": "Worker",
+    "syndrome": "Exantemática"
+  },
+  {
+    "user_id": "5681",
+    "date_onset": "2014-06-18",
+    "date_reported": "2014-06-18",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "24",
+    "gender": "female",
+    "city": "Águas Lindas de Goiás",
+    "region": "A.P. 1.0",
+    "foreigner": "1",
+    "role": "Worker",
+    "syndrome": "Exantemática"
+  },
+  {
+    "user_id": "5777",
+    "date_onset": "2014-06-03",
+    "date_reported": "2014-06-03",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "20",
+    "gender": "male",
+    "city": "Marabá",
+    "region": "A.P. 5.2",
+    "foreigner": "1",
+    "role": "Fan",
+    "syndrome": "Exantemática"
+  },
+  {
+    "user_id": "5875",
+    "date_onset": "2014-07-12",
+    "date_reported": "2014-07-12",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "21",
+    "gender": "male",
+    "city": "Lagarto",
+    "region": "A.P. 2.1",
+    "foreigner": "1",
+    "role": "Fan",
+    "syndrome": "Exantemática"
+  },
+  {
+    "user_id": "5974",
+    "date_onset": "2014-06-23",
+    "date_reported": "2014-06-23",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "31",
+    "gender": "female",
+    "city": "São Luís",
+    "region": "A.P. 3.2",
+    "foreigner": "0",
+    "role": "Fan",
+    "syndrome": "Respiratória"
+  },
+  {
+    "user_id": "6064",
+    "date_onset": "2014-06-04",
+    "date_reported": "2014-06-04",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "25",
+    "gender": "male",
+    "city": "Rio de Janeiro",
+    "region": "A.P. 3.2",
+    "foreigner": "1",
+    "role": "Fan",
+    "syndrome": "Respiratória"
+  },
+  {
+    "user_id": "6113",
+    "date_onset": "2014-06-05",
+    "date_reported": "2014-06-05",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "26",
+    "gender": "female",
+    "city": "São Joaquim da Barra",
+    "region": "A.P. 5.2",
+    "foreigner": "1",
+    "role": "Fan",
+    "syndrome": "Respiratória"
+  },
+  {
+    "user_id": "6221",
+    "date_onset": "2014-06-05",
+    "date_reported": "2014-06-05",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "51",
+    "gender": "male",
+    "city": "Teixeira de Freitas",
+    "region": "A.P. 3.2",
+    "foreigner": "1",
+    "role": "Fan",
+    "syndrome": "Exantemática"
+  },
+  {
+    "user_id": "6394",
+    "date_onset": "2014-06-06",
+    "date_reported": "2014-06-06",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "30",
+    "gender": "female",
+    "city": "Arapiraca",
+    "region": "A.P. 3.2",
+    "foreigner": "1",
+    "role": "Fan",
+    "syndrome": "Respiratória"
+  },
+  {
+    "user_id": "6569",
+    "date_onset": "2014-06-08",
+    "date_reported": "2014-06-08",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "26",
+    "gender": "male",
+    "city": "Brasilia",
+    "region": "A.P. 5.1",
+    "foreigner": "1",
+    "role": "Fan",
+    "syndrome": "Respiratória"
+  },
+  {
+    "user_id": "6677",
+    "date_onset": "2014-06-12",
+    "date_reported": "2014-06-12",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "36",
+    "gender": "male",
+    "city": "Chapadão do Sul",
+    "region": "A.P. 3.2",
+    "foreigner": "1",
+    "role": "Fan",
+    "syndrome": "Exantemática"
+  },
+  {
+    "user_id": "6800",
+    "date_onset": "2014-07-13",
+    "date_reported": "2014-07-13",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "22",
+    "gender": "female",
+    "city": "Jundiaí",
+    "region": "A.P. 5.1",
+    "foreigner": "1",
+    "role": "Athlete",
+    "syndrome": "Exantemática"
+  },
+  {
+    "user_id": "7132",
+    "date_onset": "2014-06-16",
+    "date_reported": "2014-06-16",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "20",
+    "gender": "female",
+    "city": "Várzea Grande",
+    "region": "A.P. 5.2",
+    "foreigner": "0",
+    "role": "Fan",
+    "syndrome": "Respiratória"
+  },
+  {
+    "user_id": "7142",
+    "date_onset": "2014-06-17",
+    "date_reported": "2014-06-17",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "36",
+    "gender": "male",
+    "city": "Recife",
+    "region": "A.P. 3.2",
+    "foreigner": "0",
+    "role": "Fan",
+    "syndrome": "Exantemática"
+  },
+  {
+    "user_id": "7202",
+    "date_onset": "2014-07-08",
+    "date_reported": "2014-07-08",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "23",
+    "gender": "male",
+    "city": "Aracaju",
+    "region": "A.P. 5.2",
+    "foreigner": "0",
+    "role": "Fan",
+    "syndrome": "Exantemática"
+  },
+  {
+    "user_id": "7204",
+    "date_onset": "2014-07-04",
+    "date_reported": "2014-07-04",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "55",
+    "gender": "female",
+    "city": "Recife",
+    "region": "A.P. 1.0",
+    "foreigner": "0",
+    "role": "Fan",
+    "syndrome": "Diarreica"
+  },
+  {
+    "user_id": "7423",
+    "date_onset": "2014-07-09",
+    "date_reported": "2014-07-09",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "67",
+    "gender": "female",
+    "city": "Harris County",
+    "region": "A.P. 4.0",
+    "foreigner": "1",
+    "role": "Fan",
+    "syndrome": "Respiratória"
+  },
+  {
+    "user_id": "7426",
+    "date_onset": "2014-07-07",
+    "date_reported": "2014-07-07",
+    "lat_reported": "-43.1964",
+    "lng_reported": "-22.9083",
+    "coords_reported": [
+      "-22.9083",
+      "-43.1964"
+    ],
+    "age": "21",
+    "gender": "male",
+    "city": "Brasilia",
+    "region": "A.P. 2.1",
+    "foreigner": "1",
+    "role": "Athlete",
+    "syndrome": "Respiratória"
+  }
+]

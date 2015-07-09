@@ -5,7 +5,8 @@ var buildRowChart = function(target, dimension, group) {
     .width(320)
     .height(300)
     .margins({top: 40, left: 10, right: 10, bottom: 20})
-    .colorAccessor(function (d) { return d.value; })
+    .colors(classesColorScale)
+    .colorAccessor(function(d,i) { return i; })
     .group(group)
     .dimension(dimension)
     .label(function (d) {
@@ -16,7 +17,6 @@ var buildRowChart = function(target, dimension, group) {
     })
     .elasticX(true);
 
-  setDefaultColors(chart, group);
   return chart;
 };
 

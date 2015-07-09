@@ -75,3 +75,9 @@ body {
   margin-top: 100px;
   margin-left: 100px;
 }
+
+#syndromesTimeSeries, #symptomsTimeSeries {
+  g.stack-list path.line {
+    stroke-width: 0;
+  }
+}

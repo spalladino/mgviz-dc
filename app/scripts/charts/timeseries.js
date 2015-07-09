@@ -40,7 +40,7 @@ var buildTimeChart = function(dataset, group, accessor, target, navigation, date
   var observed_symptoms = group.all().map(function(obj){ return obj.key; });
 
   symptomsTimeChart
-    .width(900)
+    .width(950)
     .height(300)
     .margins({top: 10, right: 120, bottom: 20, left: 40})
     .rangeChart(symptomsNavChart)
@@ -77,11 +77,10 @@ var buildTimeChart = function(dataset, group, accessor, target, navigation, date
     .rangeChart(symptomsNavChart)
     .transitionDuration(100)
     .x(d3.time.scale().domain([minDate, maxDate]))
-    .legend(dc.legend().x(800).y(20).itemHeight(30).gap(10))
     .xUnits(d3.time.days)
     .xAxis()
 
-  symptomsNavChart.width(800)
+  symptomsNavChart.width(850)
     .height(60)
     .margins({top: 10, right: 20, bottom: 20, left: 50})
     .dimension(volumeByHour)

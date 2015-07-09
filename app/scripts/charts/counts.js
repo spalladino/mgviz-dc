@@ -2,8 +2,8 @@
 
 var buildRowChart = function(target, dimension, group) {
   var chart = dc.rowChart(target)
-    .width(320)
-    .height(300)
+    .width(280)
+    .height(289)
     .margins({top: 40, left: 10, right: 10, bottom: 20})
     .colors(classesColorScale)
     .colorAccessor(function(d,i) { return i; })

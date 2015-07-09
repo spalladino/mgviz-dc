@@ -24,6 +24,8 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
 
+    <link rel="stylesheet" href="styles/print.css">
+
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -32,7 +34,7 @@
 
 
     <div class="container">
-      <div class="header">
+      <div class="header no-print">
         <ul class="nav nav-pills pull-right">
           <li class="active"><a href="#">Home</a></li>
         </ul>
@@ -61,6 +63,12 @@
               Viewing <span class='filter-count'></span> cases out of <span class='total-count'></span> total syndromes cases | <a href="javascript:dc.filterAll(); dc.renderAll();">Reset All Graphs</a>
             </div>
           </div>
+<!-- <<<<<<< HEAD
+=======
+          <div class="row no-print">
+            <a href="javascript:dc.filterAll(); dc.renderAll();">Reset All Graphs</a>
+          </div>
+>>>>>>> f59401b2d0f5a8b3fc45bbd4727fe45387a665ae -->
           <div class="row">
             <div id="syndromesTimeSeries"></div>
             <div id="syndromesTimeNavigation"></div>
@@ -87,6 +95,12 @@
               Viewing <span class='filter-count'></span> cases out of <span class='total-count'></span> total symptoms cases |  <a href="javascript:dc.filterAll(); dc.renderAll();">Reset All Graphs</a>
             </div>
           </div>
+<!-- <<<<<<< HEAD
+=======
+          <div class="row no-print">
+            <a href="javascript:dc.filterAll(); dc.renderAll();">Reset All Graphs</a>
+          </div>
+>>>>>>> f59401b2d0f5a8b3fc45bbd4727fe45387a665ae -->
           <div class="row">
             <div id="symptomsTimeSeries"></div>
             <div id="symptomsTimeNavigation"></div>
@@ -156,6 +170,8 @@
     <script src="scripts/charts/timeseries.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
+
+    <script src="scripts/print.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

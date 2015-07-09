@@ -23,33 +23,33 @@ function getRandomIntInclusive(min, max) {
 }
 
 syndromesCases.forEach(function(d) {
-	switch(getRandomIntInclusive(0,9)) {
-		case 0: d.region = "A.P. 1.0"; break;
-		case 1: d.region = "A.P. 2.1"; break;
-		case 2: d.region = "A.P. 2.2"; break;
-		case 3: d.region = "A.P. 3.1"; break;
-		case 4: d.region = "A.P. 3.2"; break;
-		case 5: d.region = "A.P. 3.3"; break;
-		case 6: d.region = "A.P. 4.0"; break;
-		case 7: d.region = "A.P. 5.1"; break;
-		case 8: d.region = "A.P. 5.2"; break;
-		case 9: d.region = "A.P. 5.3"; break;
-	}
+  switch(getRandomIntInclusive(0,9)) {
+    case 0: d.region = "A.P. 1.0"; break;
+    case 1: d.region = "A.P. 2.1"; break;
+    case 2: d.region = "A.P. 2.2"; break;
+    case 3: d.region = "A.P. 3.1"; break;
+    case 4: d.region = "A.P. 3.2"; break;
+    case 5: d.region = "A.P. 3.3"; break;
+    case 6: d.region = "A.P. 4.0"; break;
+    case 7: d.region = "A.P. 5.1"; break;
+    case 8: d.region = "A.P. 5.2"; break;
+    case 9: d.region = "A.P. 5.3"; break;
+  }
 })
 
 symptomsCases.forEach(function(d) {
-	switch(getRandomIntInclusive(0,9)) {
-		case 0: d.region = "A.P. 1.0"; break;
-		case 1: d.region = "A.P. 2.1"; break;
-		case 2: d.region = "A.P. 2.2"; break;
-		case 3: d.region = "A.P. 3.1"; break;
-		case 4: d.region = "A.P. 3.2"; break;
-		case 5: d.region = "A.P. 3.3"; break;
-		case 6: d.region = "A.P. 4.0"; break;
-		case 7: d.region = "A.P. 5.1"; break;
-		case 8: d.region = "A.P. 5.2"; break;
-		case 9: d.region = "A.P. 5.3"; break;
-	}
+  switch(getRandomIntInclusive(0,9)) {
+    case 0: d.region = "A.P. 1.0"; break;
+    case 1: d.region = "A.P. 2.1"; break;
+    case 2: d.region = "A.P. 2.2"; break;
+    case 3: d.region = "A.P. 3.1"; break;
+    case 4: d.region = "A.P. 3.2"; break;
+    case 5: d.region = "A.P. 3.3"; break;
+    case 6: d.region = "A.P. 4.0"; break;
+    case 7: d.region = "A.P. 5.1"; break;
+    case 8: d.region = "A.P. 5.2"; break;
+    case 9: d.region = "A.P. 5.3"; break;
+  }
 })
 
 
@@ -178,41 +178,41 @@ buildAgeChart('#syndromesAgeChart', syndromesDataset, 'syndromes');
 buildAgeChart('#symptomsAgeChart', symptomsDataset, 'symptoms');
 
 
-// Map
+// Maps
 d3.json("data/rio_aps.geojson", function(geojson) {
-	function buildMap(target, dataset) {
-		var regions = dataset.dimension(function(d) {
-			return d.region;
-		});
-		var regionsGroup = regions.group();
+  var buildMap = function(target, dataset) {
+    var regions = dataset.dimension(function(d) {
+      return d.region;
+    });
+    var regionsGroup = regions.group();
 
-		var width = 1000, height = 500;
-		var projection = d3.geo.mercator()
-			.center([-43.4586669921875, -22.95])
-			.scale(45000);
-			 
-		var map = dc.geoChoroplethChart(target);
-		map.width(width)
-	        .height(height)
-	        .dimension(regions)
-	        .group(regionsGroup)
-	        .colors(d3.scale.quantize().range(["#E2F2FF", "#C4E4FF", "#9ED2FF", "#81C5FF", "#6BBAFF", "#51AEFF", "#36A2FF", "#1E96FF", "#0089FF", "#0061B5"]))
-	        .colorDomain([0, 20])
-	        .colorCalculator(function (d) {
-				return d ? map.colors()(d) : '#ccc';
-			})
-	        .overlayGeoJson(geojson.features, "region", function (d) {
-	            return d.properties.NOME;
-	        })
-			.projection(projection)
-	        .title(function (d) {
-	            return "Region: " + d.key + "\nCount: " + d.value;
-	        });
-	}
+    var width = 1000, height = 500;
+    var projection = d3.geo.mercator()
+      .center([-43.4586669921875, -22.95])
+      .scale(45000);
 
-	buildMap('#syndromesMap', syndromesDataset);
-	buildMap('#symptomsMap', symptomsDataset);
-	dc.renderAll();
+    return dc.geoChoroplethChart(target)
+      .width(width)
+      .height(height)
+      .dimension(regions)
+      .group(regionsGroup)
+      .colors(d3.scale.quantize().domain([0, regionsGroup.top(1)[0].value]).range(["#E2F2FF", "#C4E4FF", "#9ED2FF", "#81C5FF", "#6BBAFF", "#51AEFF", "#36A2FF", "#1E96FF", "#0089FF", "#0061B5"]))
+      .colorDomain([0, regionsGroup.top(1)[0].value])
+      .colorAccessor(function (d) { return d; })
+      .overlayGeoJson(geojson.features, "region", function (d) {
+          return d.properties.NOME;
+      })
+     .projection(projection)
+      .title(function (d) {
+          return "Region: " + d.key + "\nCount: " + (d.value || 0);
+      });
+  }
+
+  var syndromesMap = buildMap('#syndromesMap', syndromesDataset);
+  var symptomsMap = buildMap('#symptomsMap', symptomsDataset);
+
+  syndromesMap.render();
+  symptomsMap.render();
 });
 
 

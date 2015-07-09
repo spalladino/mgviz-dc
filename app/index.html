@@ -63,7 +63,7 @@
         <div role="tabpanel" class="tab-pane" id="syndromes">
           <div class="row">
             <div id='syndromesCount'>
-              Viewing <span class='filter-count'></span> cases out of <span class='total-count'></span> total syndromes cases<span class="no-print"> | <a href="javascript:dc.filterAll(); dc.redrawAll();">Reset All Graphs</a> | <a href="javascript:exportSyndromes();">Export</a></span>
+              Viewing <span class='filter-count'></span> cases out of <span class='total-count'></span> total syndromes cases<span class="no-print"> | <a href="javascript:dc.filterAll(); dc.redrawAll();">Reset All Graphs</a> | <a href="javascript:exportSyndromes();">Export (.csv)</a></span>
             </div>
           </div>
           <div class="row">
@@ -99,7 +99,12 @@
               </div>
             </div>
             <div class="col-md-6">
-              <div id="syndromesGenderChart"></div>
+              <div id="syndromesGenderChart">
+              <h4 class="text-center">
+              by gender
+              <h5 class="text-center"><span class='reset' style='display: none;'>(gender: <span class='filter'></span>)</span></h5>
+              </h4>
+              </div>
             </div>
           </div>
         </div>
@@ -109,7 +114,7 @@
         <div role="tabpanel" class="tab-pane" id="symptoms">
           <div class="row">
             <div id='symptomsCount'>
-              Viewing <span class='filter-count'></span> cases out of <span class='total-count'></span> total symptoms cases<span class="no-print"> |  <a href="javascript:dc.filterAll(); dc.redrawAll();">Reset All Graphs</a> | <a href="javascript:exportSymptoms();">Export</a></span>
+              Viewing <span class='filter-count'></span> cases out of <span class='total-count'></span> total symptoms cases<span class="no-print"> |  <a href="javascript:dc.filterAll(); dc.redrawAll();">Reset All Graphs</a> | <a href="javascript:exportSymptoms();">Export (.csv)</a></span>
             </div>
           </div>
           <div class="row">
@@ -145,7 +150,12 @@
               </div>
             </div>
             <div class="col-md-6">
-              <div id="symptomsGenderChart"></div>
+              <div id="symptomsGenderChart">
+              <h4 class="text-center">
+              by gender
+              <h5 class="text-center"><span class='reset' style='display: none;'>(gender: <span class='filter'></span>)</span></h5>
+              </h4>
+              </div>
             </div>
           </div>
         </div>

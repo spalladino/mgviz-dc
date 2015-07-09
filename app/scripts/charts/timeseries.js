@@ -7,6 +7,8 @@
 
 var buildTimeChart = function(dataset, group, accessor, target, navigation) {
 
+  var precision = ['days',d3.time.days];
+
   var symptomsTimeChart = dc.compositeChart(target);
   var symptomsNavChart = dc.barChart(navigation);
 
@@ -49,6 +51,8 @@ var buildTimeChart = function(dataset, group, accessor, target, navigation) {
     .elasticY(true)
     .x(d3.time.scale().domain([new Date(2015, 5, 1), new Date(2015, 5, 19)]))
     .xUnits(d3.time.days)
+    .xAxisLabel('date (' + precision[0] + ')') // (optional) render an axis label below the x axis
+    .yAxisLabel('no. cases')
     .xAxis()
 
   var theLines = [];

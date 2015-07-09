@@ -15,6 +15,7 @@ var buildRowChart = function(target, dimension, group) {
       return d.value;
     })
     .elasticX(true);
+
   setDefaultColors(chart, group);
   return chart;
 };

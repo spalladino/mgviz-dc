@@ -1,13 +1,11 @@
 // Time series chart
 
-var buildTimeChart = function(dataset, group, accessor, target, navigation) {
+var buildTimeChart = function(dataset, group, accessor, target, navigation, dateDimension) {
 
   var symptomsTimeChart = dc.compositeChart(target);
   var symptomsNavChart = dc.barChart(navigation);
 
-  var volumeByHour = dataset.dimension(function(d) {
-    return new Date(d.date_onset);
-  });
+  var volumeByHour = dateDimension;
 
   var volumeByHourGroup = volumeByHour.group(
     function(the_date){
@@ -46,7 +44,7 @@ var buildTimeChart = function(dataset, group, accessor, target, navigation) {
     .xAxis()
 
   var theLines = [];
-  var colorsSymptoms = ["red", "green", "blue", "yellow", "black", "orange", "purple"]; 
+  var colorsSymptoms = ["red", "green", "blue", "yellow", "black", "orange", "purple"];
   //for now we just give a few colors to choose from? who knows what to do?
   //maybe some hash function on the name of the symptom that maps name -> color
 
@@ -56,7 +54,7 @@ var buildTimeChart = function(dataset, group, accessor, target, navigation) {
         .dimension(volumeByHour)
         .colors(colorsSymptoms[i])
         .group(symptomGroupsTimeSeries, observed_symptoms[i], function(d){
-          return d.value[field] || null;  
+          return d.value[field] || null;
         })
     );
   });
@@ -195,6 +193,6 @@ OLD STACKED CHARTS, DO NOT REMOVE AT THE MOMEN
 */
 };
 
-buildTimeChart(syndromesDataset, syndromesGroup, 'syndrome', '#syndromesTimeSeries', '#syndromesTimeNavigation');
-buildTimeChart(symptomsDataset, symptomsGroup, 'symptom', '#symptomsTimeSeries', '#symptomsTimeNavigation');
+buildTimeChart(syndromesDataset, syndromesGroup, 'syndrome', '#syndromesTimeSeries', '#syndromesTimeNavigation', syndromesDateDimension);
+buildTimeChart(symptomsDataset, symptomsGroup, 'symptom', '#symptomsTimeSeries', '#symptomsTimeNavigation', symptomsDateDimension);
 

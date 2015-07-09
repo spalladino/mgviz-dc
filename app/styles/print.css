@@ -1,0 +1,35 @@
+@media print {
+  div.header {
+    display: none;
+  }
+  
+  .jumbotron {
+    padding: 0px;
+  }
+  
+  .nav-tabs {
+    display: none;
+  }
+
+  .tab-content > .tab-pane {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  #syndromesCount, #symptomsCount {
+    float: none;
+  }
+  
+  .print {
+    display: block;
+  }
+}
+
+@media screen {
+  .print {
+    display: none;
+  }
+
+}
+

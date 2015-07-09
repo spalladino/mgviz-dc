@@ -59,6 +59,7 @@ body {
 .region.deselected path,
 .region.selected path {
  stroke: white;
+ cursor: pointer;
 }
 
 .region.selected path {

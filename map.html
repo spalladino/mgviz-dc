@@ -1,0 +1,68 @@
+<!DOCTYPE html> <html lang=en> <head> <meta charset=utf-8> <title>Mass Gatherings Dashboard - Map</title> <link rel=stylesheet href=styles/map.css>  <body> <div id=map style="width: 600px; height: 400px"></div>  <script src=bower_components/d3/d3.min.js></script> <link rel=stylesheet href="bower_components/leaflet/dist/leaflet.css"> <script src=bower_components/leaflet/dist/leaflet.js></script> <script src=bower_components/d3-tip/index.js></script> <script>var dayNameFormat = d3.time.format("%a %d");
+		function symptomsStr(symptoms) {
+			var l = [];
+			for(var name in symptoms) {
+			    if (symptoms[name]) l.push(name);
+			}
+			return l.join(", ");
+		}
+	
+		var map = L.map('map').setView([-22.824288902739482, -43.2586669921875], 10);
+			L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+				  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+				  opacity: 0.6
+				}).addTo(map);
+				
+	    // Initialize the SVG layer
+	    map._initPathRoot()    
+
+	    // We pick up the SVG from the map object
+	    var svg = d3.select("#map").select("svg"),
+	    g = svg.append("g");
+		
+		var tip = d3.tip()
+			.attr('class', 'd3-tip')
+			.offset([-10, 0])
+			.html(function(d) {
+			  return "<span>" + dayNameFormat(d.time) + "</span>: <span>" + symptomsStr(d.symptoms) + "</span>";
+			});
+		svg.call(tip);
+			
+		d3.text("data/world_cup.csv", function(error, text) {
+			var data = d3.csv.parseRows(text, function(d) {
+				return {
+					id: d[0],
+					time: new Date(d[2]),
+					coordinates: [d[5], d[6]],
+					symptoms: {
+						"Fever": d[9] === "1",
+						"Cough": d[10] === "1",
+						"Sore throat": d[11] == "1"
+					}
+				}
+			});
+			
+			var feature = g.selectAll("circle").data(data)
+			feature.enter().append("circle")
+				.style("stroke", "black")
+				.style("opacity", .6) 
+				.style("fill", "#3182bd")
+				.attr("r", 4)
+				.attr("class", "marker")
+				.on('mouseover', tip.show)
+				.on('mouseout', tip.hide);
+			feature.exit().remove();
+
+			map.on("viewreset", update);
+			update();
+
+			function update() {
+				feature.attr("transform", 
+					function(d) { 
+						return "translate("+ 
+						map.latLngToLayerPoint(d.coordinates).x +","+ 
+						map.latLngToLayerPoint(d.coordinates).y +")";
+					}
+				);
+			}
+		});</script> 

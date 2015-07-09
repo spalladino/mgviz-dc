@@ -21,9 +21,13 @@ var setFilters = function(filters) {
     $('#symptomsTab').tab('show');
   }
 };
+
 var userAlerts = [{"alert_date":"2015-06-07","alert_syndrome":"Diarreica","alert_region":"Brasilia"}];
 
 // Alerts management
+
+
+
 
 var setFilters = function(filters) {
 syndromesChart.filter(filters.syndrome);

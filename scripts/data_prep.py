@@ -3,28 +3,102 @@ import csv
 import datetime
 from operator import itemgetter
 import copy
+import uuid
 
 
 '''
-Symptoms
-    1 Febre
-|  2 | Tosse
-|  5 | Dor de Garganta
-|  6 | Falta de ar
-|  7 | Nausea e vomitos
-|  8 | Diarreia
-|  9 | Dor nas articulacoes
-| 10 | Dor de cabeca
-| 11 | Sangramento
-| 12 | Manchas vermelhas no corpo
-| 13 | Teve contato ou conhece alguem com algum desses sintomas nos ultimos 7 dias?
-| 14 | Voce procurou o servico de saude?
+Output format:
+
+{
+  "user_id": "USER-0",
+  "date_onset": "2015-06-07",
+  "date_reported": "2015-06-08T10:00:00Z",
+  "coords_reported": [
+    -44.166579547126275,
+    -23.196792124315248
+  ],
+  "lat_reported": -23.196792124315248,
+  "lng_reported": -44.166579547126275,
+  "syndrome": "Diarreica",
+  "age": 26,
+  "gender": "Female",
+  "sought_assistance": true,
+  "nearby_symptoms": true,
+  "role": 'Athlete',
+  "needs_help": true,
+  "foreigner": true
+}
 '''
+
+'''
+Input fields:
+
+1   id
+2   usuario_id
+3   data_cadastro
+4   jogo_ok
+5   pontuacao
+6   latitude
+7   longitude
+8   cidade_id
+9   cidade_regiao_metro
+10  atualizado
+11  ativo
+12  campo1
+13  campo2
+14  campo3
+15  campo4
+16  campo5
+17  campo6
+18  campo7
+19  campo8
+20  campo9
+21  campo10
+22  campo11
+23  campo12
+24  sentimento
+25  needs_help
+26  foreigner
+27  nearby_symptoms
+28  role
+29  sought_help
+30  region_id
+31  gender
+32  age
+33  fake_lat
+34  fake_lng
+'''
+
+
+# {
+#     "city": "Caruaru",
+#     "user_id": "172",
+#     "region": "",
+#     "longitude": "-8.2877372",
+#     "sex": "male ",
+#     "record_id": "1822",
+#     "report_date": "2014-05-23",
+#     "date_onset": "2014-05-23",
+#     "latitude": "-35.9635275",
+#     "age": "29",
+#     "symptom": "diarrhea"
+#   },
+
 
 #symptoms = {1:"fever", 2:"cough", 3:"sore throat", 6:"lack of air", 7:"vomiting", 8:"diarrhea", 9:"joint pain", 10:"headache",
 #            11:"bleeding", 12:"skin rash", 13:"had contact with symptoms?", 14:"searched the health service?"}
-symptom_names = ["fever", "cough", "sore throat", "lack of air", "vomiting", "diarrhea", "joint pain", "headache",
-            "bleeding", "skin rash", "had contact with symptoms?", "searched the health service?"]
+symptom_names = ["Fever",
+                "Cough",
+                "Sore throat",
+                "Shortness of breath",
+                "Nuasea and Vommitting",
+                "Diarrhea",
+                "Joint-pain",
+                "Headache",
+                "Bleeding",
+                "Rash",
+                "Dark urine",
+                "Red eyes"]
 
 KEY_USER = 0
 KEY_SYMPTOM = 1
@@ -44,32 +118,44 @@ def make_event_from_row(csv_row):
             user['user_id'] = csv_col
         if col_num == 3:
             event_date_time = csv_col.split(" ")
-            user['report_date'] = event_date_time[0]
-            user['onset_date'] = event_date_time[0]
-        if col_num == 6:
-            user['longitude'] = csv_col
-        if col_num == 7:
-            user['latitude'] = csv_col
+            user['date_reported'] = event_date_time[0]
+            user['date_onset'] = event_date_time[0]
+        if col_num == 33:
+            user['lng_reported'] = csv_col
+        if col_num == 34:
+            user['lat_reported'] = csv_col
         if col_num == 8:
             user['city'] = csv_col
-        if col_num == 9:
+        if col_num == 30:
             user['region'] = csv_col
-        if col_num == 27:
+        if col_num == 32:
             user['age'] = csv_col
-        if col_num == 28:
-            user['sex'] = 'male ' if csv_col == 'masculino' else 'female'
+        if col_num == 31:
+            user['gender'] = 'male' if csv_col == 'masculino' else 'female'
         #collect symptoms
-        if col_num >= 12 and col_num <= 21: #ignore contact with symptoms and contacted health services
+        if col_num >= 12 and col_num <= 23:
             if csv_col == '1':
                 sympton_name = symptom_names[col_num - 12]
                 symptoms.append(sympton_name)
+        #new fields
+        if col_num == 25:
+            user['needs_help'] = csv_col
+        if col_num == 26:
+            user['foreigner'] = csv_col
+        if col_num == 27:
+            user['nearby_symptoms'] = csv_col
+        if col_num == 28:
+            user['role'] = csv_col
+        if col_num == 29:
+            user['sought_help'] = csv_col
 
     return (user, symptoms)
 
 def process_user_symptom(user_event, symptom, state, users_out):
     #if user_event['user_id'] != '241' and user_event['user_id'] != '223':
     #    return
-    key = (user_event['user_id'], symptom, user_event['onset_date'], state)
+    user_id = user_event['user_id'] if user_event['user_id'] else uuid.uuid4()
+    key = (user_id, symptom, user_event['date_onset'], state)
     # only take the first event for this day
     # TODO except if its an I feel fine
     if not key in users_out:
@@ -84,8 +170,6 @@ def process_raw_data(in_file, out_file):
         for csv_row in csv_rows:
             csv_row_count += 1
             (user_report, symptoms) = make_event_from_row(csv_row)
-            if user_report['record_id'] == '19240':
-                print 'here;'
             if len(symptoms) == 0:
                 for symptom in symptom_names: # signal 'I feel fine'
                     process_user_symptom(user_report, symptom, 0, user_events)
@@ -116,7 +200,7 @@ def process_raw_data(in_file, out_file):
 
         curr_user = curr_event['user_id']
         curr_symptom = curr_event['symptom']
-        curr_date = curr_event['onset_date']
+        curr_date = curr_event['date_onset']
 
         if last_key is None:
             save_case = True
@@ -135,7 +219,7 @@ def process_raw_data(in_file, out_file):
 
     # print "---------------cases -------------"
     # for case in cases_json:
-    #    print case['user_id'], case['symptom'], case['onset_date']
+    #    print case['user_id'], case['symptom'], case['date_onset']
     out = open(out_file, 'wb')
     out.write(json.dumps(cases_json))
     out.close

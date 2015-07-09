@@ -7,7 +7,7 @@ var buildTable = function(dataset, accessor, dateDimension, target) {
      function(d) { return d.user_id; },
      function(d) { return d.gender; },
      function(d) { return d.age; },
-     function(d) { return d['accessor']; },
+     function(d) { return d[accessor]; },
      function(d) {
        var date1 = new Date(d.date_onset);
        var date2 = new Date(d.date_reported);

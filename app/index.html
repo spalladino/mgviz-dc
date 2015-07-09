@@ -46,7 +46,7 @@
         <h1>Mass Gatherings</h1>
         <p>Dashboard for participatory surveillance data.</p>
         <div class="alerts">
-        Alert on 2015-06-07: <a href="javascript:syndromesChart.filter('Diarreica');dc.redrawAll();">Diarreica</a>, Brasilia
+        Alert on 2015-06-07: <a href="javascript:syndromesChart.filter('Diarreica');regions.filter('A.P. 5.1');dc.redrawAll();">Diarreica, Brasilia</a>
         </div>
       </div>
 
@@ -115,7 +115,19 @@
             </div>
           </div>
           <div class="row">
-            <div id="syndromesCaseList"></div>
+            <table id="syndromesCaseList">
+              <thead>
+              <tr class="header">
+                <th width="150px">User ID</th>
+                <th width="150px">Gender</th>
+                <th width="150px">Age</th>
+                <th width="150px">Symptom</th>
+                <th width="150px">#Days</th>
+                <th width="150px">Date</th>
+                <th width="150px">Show in Map</th>
+              </tr>
+              </thead>
+            </table>
           </div>
         </div>
 
@@ -182,8 +194,22 @@
             </div>
           </div>
           <div class="row">
-          <div id="symptomsCaseList"></div>
+            <table id="symptomsCaseList">
+              <thead>
+              <tr class="header">
+                <th width="150px">User ID</th>
+                <th width="150px">Gender</th>
+                <th width="150px">Age</th>
+                <th width="150px">Syndrom</th>
+                <th width="150px">#Days</th>
+                <th width="150px">Date</th>
+                <th width="150px">Show in Map</th>
+              </tr>
+              </thead>
+            </table>
           </div>
+
+
         </div>
 
 

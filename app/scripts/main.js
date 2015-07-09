@@ -67,13 +67,20 @@ var syndromesGroup = syndromesDimension.group();
 
 
 
+// Utils
+var setDefaultColors = function(chart, group) {
+  var range = [0, group.top(1)[0].value];
+  return chart.colors(d3.scale.quantize().domain(range).range(["#E2F2FF", "#C4E4FF", "#9ED2FF", "#81C5FF", "#6BBAFF", "#51AEFF", "#36A2FF", "#1E96FF", "#0089FF", "#0061B5"]))
+};
+
 // Row charts
 
 var buildRowChart = function(target, dimension, group) {
-  return dc.rowChart(target)
+  var chart = dc.rowChart(target)
     .width(320)
-    .height(200)
-    .margins({top: 20, left: 10, right: 10, bottom: 20})
+    .height(300)
+    .margins({top: 40, left: 10, right: 10, bottom: 20})
+    .colorAccessor(function (d) { return d.value; })
     .group(group)
     .dimension(dimension)
     .label(function (d) {
@@ -83,10 +90,12 @@ var buildRowChart = function(target, dimension, group) {
       return d.value
     })
     .elasticX(true);
+  setDefaultColors(chart, group);
+  return chart;
 };
 
-var syndromesChart = buildRowChart('#syndromesChart', syndromesDimension, syndromesGroup, 'syndromes');
-var symptomsChart = buildRowChart('#symptomsChart', symptomsDimension, symptomsGroup, 'symptoms');
+var syndromesChart = buildRowChart('#syndromesChart', syndromesDimension, syndromesGroup);
+var symptomsChart = buildRowChart('#symptomsChart', symptomsDimension, symptomsGroup);
 
 
 // Data count widget
@@ -106,19 +115,20 @@ var buildTimeChart = function(target, dataset) {
     return d.date_onset;
   });
 
-  return dc.lineChart(target).width(1000)
-    .height(200)
-    .margins({top: 10, right: 10, bottom: 20, left: 40})
+  var chart = dc.lineChart(target).width(1000)
+    .height(300)
+    .margins({top: 30, right: 40, bottom: 60, left: 40})
     .dimension(volumeByHour)
     .group(volumeByHourGroup)
     .elasticY(true)
     .x(d3.time.scale()) //x(d3.time.scale().domain([new Date(2014, 1, 1), new Date(2014, 12, 31)]))
     .elasticX(true)
     .xAxis();
+  return chart;
 };
 
-var syndromesTimeSeries = buildTimeChart('#syndromesTimeSeries', syndromesDataset, 'syndromes');
-var symptomsTimeSeries = buildTimeChart('#symptomsTimeSeries', symptomsDataset, 'symptoms');
+var syndromesTimeSeries = buildTimeChart('#syndromesTimeSeries', syndromesDataset);
+var symptomsTimeSeries = buildTimeChart('#symptomsTimeSeries', symptomsDataset);
 
 
 // Demographic pie charts
@@ -131,20 +141,20 @@ var buildDemographicPieChart = function(target, dataset, variable) {
   var group = dimension.group();
 
   return dc.pieChart(target)
-    .width(400)
-    .height(400)
+    .width(250)
+    .height(200)
     .dimension(dimension)
     .group(group);
 };
 
-buildDemographicPieChart('#syndromesGenderChart', syndromesDataset, 'gender', 'syndromes');
-buildDemographicPieChart('#symptomsGenderChart', symptomsDataset, 'gender', 'symptoms');
+buildDemographicPieChart('#syndromesGenderChart', syndromesDataset, 'gender');
+buildDemographicPieChart('#symptomsGenderChart', symptomsDataset, 'gender');
 
 
 
 // Age group charts
 
-var ageSteps = [10,20,30,40,50,60];
+var ageSteps = [5,10,15,20,25,30,40,50,60];
 var buildAgeChart = function(target, dataset) {
   var dimension = dataset.dimension(function(d) {
     return d.age;
@@ -157,10 +167,12 @@ var buildAgeChart = function(target, dataset) {
     return index < 0 ? ageSteps.length : index;
   })
 
-  return dc.rowChart(target)
-    .width(400)
+  var chart = dc.rowChart(target)
+    .width(550)
     .height(400)
+    .margins({top: 30, right: 40, bottom: 30, left: 40})
     .dimension(dimension)
+    .colorAccessor(function (d) { return d.value; })
     .group(group)
     .label(function(d) {
       var index = d.key;
@@ -172,10 +184,13 @@ var buildAgeChart = function(target, dataset) {
         return "> " + String(ageSteps[ageSteps.length-1]);
       }
     });
+
+  setDefaultColors(chart, group);
+  return chart;
 };
 
-buildAgeChart('#syndromesAgeChart', syndromesDataset, 'syndromes');
-buildAgeChart('#symptomsAgeChart', symptomsDataset, 'symptoms');
+buildAgeChart('#syndromesAgeChart', syndromesDataset);
+buildAgeChart('#symptomsAgeChart', symptomsDataset);
 
 
 // Maps
@@ -186,18 +201,16 @@ d3.json("data/rio_aps.geojson", function(geojson) {
     });
     var regionsGroup = regions.group();
 
-    var width = 1000, height = 500;
+    var width = 850, height = 350;
     var projection = d3.geo.mercator()
-      .center([-43.4586669921875, -22.95])
+      .center([-43.30, -23.00])
       .scale(45000);
 
-    return dc.geoChoroplethChart(target)
+    var chart = dc.geoChoroplethChart(target)
       .width(width)
       .height(height)
       .dimension(regions)
       .group(regionsGroup)
-      .colors(d3.scale.quantize().domain([0, regionsGroup.top(1)[0].value]).range(["#E2F2FF", "#C4E4FF", "#9ED2FF", "#81C5FF", "#6BBAFF", "#51AEFF", "#36A2FF", "#1E96FF", "#0089FF", "#0061B5"]))
-      .colorDomain([0, regionsGroup.top(1)[0].value])
       .colorAccessor(function (d) { return d; })
       .overlayGeoJson(geojson.features, "region", function (d) {
           return d.properties.NOME;
@@ -206,6 +219,8 @@ d3.json("data/rio_aps.geojson", function(geojson) {
       .title(function (d) {
           return "Region: " + d.key + "\nCount: " + (d.value || 0);
       });
+    setDefaultColors(chart, regionsGroup);
+    return chart;
   }
 
   var syndromesMap = buildMap('#syndromesMap', syndromesDataset);

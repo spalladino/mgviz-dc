@@ -65,3 +65,13 @@ body {
 .region.selected path {
   stroke-width: 2;
 }
+
+#syndromesCount, #symptomsCount {
+  float: right;
+  margin: 10px 30px;
+}
+
+#syndromesGenderChart, #symptomsGenderChart {
+  margin-top: 100px;
+  margin-left: 100px;
+}

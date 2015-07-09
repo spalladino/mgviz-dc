@@ -55,12 +55,12 @@ body {
 }
 
 /* Map region borders */
-.dc-chart path,
-.dc-chart .deselected path,
-.dc-chart .selected path {
+.region path,
+.region.deselected path,
+.region.selected path {
  stroke: white;
 }
 
-.dc-chart .selected path {
+.region.selected path {
   stroke-width: 2;
 }

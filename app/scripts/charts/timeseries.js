@@ -43,7 +43,6 @@ var buildTimeChart = function(dataset, group, accessor, target, navigation) {
   //This extracts all the symptoms we have seen!
   //We have to extract the first element here because we can't modify the array
   // as everything here is lazy and computed asynchronously!
-  console.log(group.top(Infinity));
   var observed_symptoms = group.top(Infinity).map(function(obj){ return obj.key; });
   var first_symptom = observed_symptoms[0];
   observed_symptoms.shift();
@@ -55,40 +54,17 @@ var buildTimeChart = function(dataset, group, accessor, target, navigation) {
     .margins({top: 10, right: 10, bottom: 20, left: 40})
     .dimension(volumeByHour)
     .group(symptomGroupsTimeSeries, first_symptom, function(d){
-      return d.value[first_symptom] || 0;
+      return d.value[first_symptom] || null;
     })
     .brushOn(false) // we need this for the clickable hack haha
-  /*=======
-  var buildTimeChart = function(target, dataset) {
-    var volumeByHour = dataset.dimension(function(d) {
-      return d3.time.day(new Date(d.date_onset));
-    });
-
-    var volumeByHourGroup = volumeByHour.group().reduceCount(function(d) {
-      return d.date_onset;
-    });
-
-    var chart = dc.lineChart(target).width(1000)
-      .height(300)
-      .margins({top: 30, right: 40, bottom: 60, left: 40})
-      .dimension(volumeByHour)
-      .group(volumeByHourGroup)
-      .elasticY(true)
-      .x(d3.time.scale()) //x(d3.time.scale().domain([new Date(2014, 1, 1), new Date(2014, 12, 31)]))
-      .elasticX(true)
-      .xAxis();
-    return chart;
-  };
-
-  var syndromesTimeSeries = buildTimeChart('#syndromesTimeSeries', syndromesDataset);
-  var symptomsTimeSeries = buildTimeChart('#symptomsTimeSeries', symptomsDataset);
-
-  */
-
+    .defined(function(d){
+      console.log(d.y);
+      return !isNaN(d.y)
+    })
 
   observed_symptoms.forEach(function(field, i){
     symptomsTimeChart.stack(symptomGroupsTimeSeries, observed_symptoms[i], function(d){
-      return d.value[field] || 0;
+      return d.value[field] || null;
     });
   });
 
@@ -114,7 +90,7 @@ var buildTimeChart = function(dataset, group, accessor, target, navigation) {
     });
 
   //onclick issue maybe fixed here https://github.com/dc-js/dc.js/issues/168
-
+  
   return symptomsNavChart.width(1140)
     .height(60)
     .margins({top: 0, right: 50, bottom: 20, left: 40})

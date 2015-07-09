@@ -61,6 +61,7 @@ var buildTimeChart = function(dataset, group, accessor, target, navigation) {
       console.log(d.y);
       return !isNaN(d.y)
     })
+    .mouseZoomable(true)
 
   observed_symptoms.forEach(function(field, i){
     symptomsTimeChart.stack(symptomGroupsTimeSeries, observed_symptoms[i], function(d){
@@ -70,7 +71,7 @@ var buildTimeChart = function(dataset, group, accessor, target, navigation) {
 
   symptomsTimeChart
     .rangeChart(symptomsNavChart)
-    .transitionDuration(500)
+    .transitionDuration(100)
     .elasticY(true)
     .x(d3.time.scale().domain([new Date(2015, 5, 1), new Date(2015, 5, 19)]))
     .xUnits(d3.time.days)
@@ -81,8 +82,6 @@ var buildTimeChart = function(dataset, group, accessor, target, navigation) {
   symptomsTimeChart.on('renderlet.timechart.' + accessor, function(chart, filter) {
       chart.selectAll("path.area").on("click.timechart" + accessor, (
         function(d) {
-          console.log("wtf");
-          console.log(d);
           window[accessor+ "sChart"].filter([d.name]);
           dc.redrawAll();
         }
@@ -90,7 +89,7 @@ var buildTimeChart = function(dataset, group, accessor, target, navigation) {
     });
 
   //onclick issue maybe fixed here https://github.com/dc-js/dc.js/issues/168
-  
+
   return symptomsNavChart.width(1140)
     .height(60)
     .margins({top: 0, right: 50, bottom: 20, left: 40})
@@ -102,7 +101,8 @@ var buildTimeChart = function(dataset, group, accessor, target, navigation) {
     .x(d3.time.scale().domain([new Date(2015, 5, 1), new Date(2015, 5, 19)]))
     .round(d3.time.days.round)
     .alwaysUseRounding(true)
-    .xUnits(d3.time.days);
+    .xUnits(d3.time.days)
+    .yAxis().ticks(0);
 
 };
 

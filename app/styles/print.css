@@ -21,15 +21,18 @@
     float: none;
   }
   
-  .print {
+  .print-only {
     display: block;
+  }
+  
+  .no-print {
+    display: none;
   }
 }
 
 @media screen {
-  .print {
+  .print-only {
     display: none;
   }
-
 }
 

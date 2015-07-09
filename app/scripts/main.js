@@ -23,12 +23,32 @@ function getRandomIntInclusive(min, max) {
 }
 
 syndromesCases.forEach(function(d) {
-	switch(getRandomIntInclusive(0,3)) {
+	switch(getRandomIntInclusive(0,9)) {
 		case 0: d.region = "A.P. 1.0"; break;
 		case 1: d.region = "A.P. 2.1"; break;
 		case 2: d.region = "A.P. 2.2"; break;
 		case 3: d.region = "A.P. 3.1"; break;
 		case 4: d.region = "A.P. 3.2"; break;
+		case 5: d.region = "A.P. 3.3"; break;
+		case 6: d.region = "A.P. 4.0"; break;
+		case 7: d.region = "A.P. 5.1"; break;
+		case 8: d.region = "A.P. 5.2"; break;
+		case 9: d.region = "A.P. 5.3"; break;
+	}
+})
+
+symptomsCases.forEach(function(d) {
+	switch(getRandomIntInclusive(0,9)) {
+		case 0: d.region = "A.P. 1.0"; break;
+		case 1: d.region = "A.P. 2.1"; break;
+		case 2: d.region = "A.P. 2.2"; break;
+		case 3: d.region = "A.P. 3.1"; break;
+		case 4: d.region = "A.P. 3.2"; break;
+		case 5: d.region = "A.P. 3.3"; break;
+		case 6: d.region = "A.P. 4.0"; break;
+		case 7: d.region = "A.P. 5.1"; break;
+		case 8: d.region = "A.P. 5.2"; break;
+		case 9: d.region = "A.P. 5.3"; break;
 	}
 })
 
@@ -165,33 +185,15 @@ d3.json("data/rio_aps.geojson", function(geojson) {
 			return d.region;
 		});
 		var regionsGroup = regions.group();
-	
-//		dc.leafletChoroplethChart(target)
-//		     .dimension(regions)
-//		     .group(regionsGroup)
-//		     .width(600)
-//		     .height(400)
-//		     .center([-22.884288902739482, -43.4586669921875])
-//		     .zoom(10)
-//		     .geojson(geojson)
-//		     .colors(['#fff7f3', '#fde0dd', '#fcc5c0', '#fa9fb5', '#f768a1', '#dd3497', '#ae017e', '#7a0177', '#49006a'])
-//		     .colorDomain(function() {
-//		       return [dc.utils.groupMin(this.group(), this.valueAccessor()), dc.utils.groupMax(this.group(), this.valueAccessor())];
-//		     })
-//		     .colorAccessor(function(d,i) {
-//		       return d.value;
-//		     })
-//		     .featureKeyAccessor(function(feature) {
-//		       return feature.properties.NOME;
-//		     })
-//		     .renderPopup(true)
-//		     .popup(function(d,feature) {
-//		       return feature.properties.NOME + " : " + d.value;
-//		     });
+
+		var width = 1000, height = 500;
+		var projection = d3.geo.mercator()
+			.center([-43.4586669921875, -22.95])
+			.scale(45000);
 			 
 		var map = dc.geoChoroplethChart(target);
-		map.width(1000)
-	        .height(500)
+		map.width(width)
+	        .height(height)
 	        .dimension(regions)
 	        .group(regionsGroup)
 	        .colors(d3.scale.quantize().range(["#E2F2FF", "#C4E4FF", "#9ED2FF", "#81C5FF", "#6BBAFF", "#51AEFF", "#36A2FF", "#1E96FF", "#0089FF", "#0061B5"]))
@@ -199,16 +201,17 @@ d3.json("data/rio_aps.geojson", function(geojson) {
 	        .colorCalculator(function (d) {
 				return d ? map.colors()(d) : '#ccc';
 			})
-	        .overlayGeoJson(geojson, "region", function (d) {
+	        .overlayGeoJson(geojson.features, "region", function (d) {
 	            return d.properties.NOME;
 	        })
+			.projection(projection)
 	        .title(function (d) {
 	            return "Region: " + d.key + "\nCount: " + d.value;
 	        });
 	}
 
 	buildMap('#syndromesMap', syndromesDataset);
-//	buildMap('#symptomsMap', symptomsDataset);
+	buildMap('#symptomsMap', symptomsDataset);
 	dc.renderAll();
 });
 

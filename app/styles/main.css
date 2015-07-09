@@ -54,3 +54,13 @@ body {
   padding: 14px 24px;
 }
 
+/* Map region borders */
+.dc-chart path,
+.dc-chart .deselected path,
+.dc-chart .selected path {
+ stroke: white;
+}
+
+.dc-chart .selected path {
+  stroke-width: 2;
+}

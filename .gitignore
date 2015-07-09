@@ -2,4 +2,6 @@ node_modules
 dist
 .tmp
 bower_components
+*.iml
+.idea
 

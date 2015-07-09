@@ -1,5 +1,10 @@
 // Time series chart
 
+//title - dynamic - "Number of x(syndrome) between x(Date) and y(date)"
+//axes labels
+//histogram button
+//links to times
+
 var buildTimeChart = function(dataset, group, accessor, target, navigation) {
 
   var symptomsTimeChart = dc.compositeChart(target);
@@ -37,8 +42,9 @@ var buildTimeChart = function(dataset, group, accessor, target, navigation) {
   symptomsTimeChart
     .width(1100)
     .height(300)
-    .margins({top: 10, right: 10, bottom: 20, left: 40})
+    .margins({top: 10, right: 110, bottom: 20, left: 40})
     .rangeChart(symptomsNavChart)
+    .shareTitle(false)
     .transitionDuration(100)
     .elasticY(true)
     .x(d3.time.scale().domain([new Date(2015, 5, 1), new Date(2015, 5, 19)]))
@@ -58,22 +64,24 @@ var buildTimeChart = function(dataset, group, accessor, target, navigation) {
         .group(symptomGroupsTimeSeries, observed_symptoms[i], function(d){
           return d.value[field] || null;  
         })
+        .interpolate("monotone")
     );
   });
 
-  symptomsTimeChart.compose(theLines);
+  symptomsTimeChart.compose(theLines).brushOn(false);
 
   symptomsTimeChart
     .rangeChart(symptomsNavChart)
     .transitionDuration(100)
     .elasticY(true)
     .x(d3.time.scale().domain([new Date(2015, 5, 1), new Date(2015, 5, 19)]))
+    .legend(dc.legend().x(1000).y(20).itemHeight(30).gap(10))
     .xUnits(d3.time.days)
     .xAxis()
 
-  return symptomsNavChart.width(1140)
+  return symptomsNavChart.width(1010)
     .height(60)
-    .margins({top: 0, right: 50, bottom: 20, left: 40})
+    .margins({top: 10, right: 20, bottom: 20, left: 40})
     .dimension(volumeByHour)
     .group(volumeByHourGroup)
     .centerBar(true)

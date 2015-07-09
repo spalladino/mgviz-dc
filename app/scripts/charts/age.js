@@ -25,7 +25,7 @@ var buildAgeChart = function(target, dataset) {
       if (index == 0) {
         return "< " + String(ageSteps[0]);
       } else  if (index < ageSteps.length) {
-        return String(ageSteps[index-1]) + "-" + String(ageSteps[index]);
+        return String(ageSteps[index-1]) + "-" + String(ageSteps[index]-1);
       } else {
         return "> " + String(ageSteps[ageSteps.length-1]);
       }

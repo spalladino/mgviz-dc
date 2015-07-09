@@ -12,7 +12,7 @@ var buildRowChart = function(target, dimension, group) {
       return d.key;
     })
     .title(function (d) {
-      return d.value
+      return d.value;
     })
     .elasticX(true);
   setDefaultColors(chart, group);

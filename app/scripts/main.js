@@ -150,8 +150,8 @@ var first_symptom = observed_symptoms[0];
 observed_symptoms.shift();
 
 symptomsTimeChart
-  .width(800)
-  .height(200)
+  .width(1100)
+  .height(300)
   .renderArea(true)
   .margins({top: 10, right: 10, bottom: 20, left: 40})
   .dimension(volumeByHour)
@@ -308,7 +308,7 @@ symptomsTimeChart
   .rangeChart(symptomsNavChart)
   .transitionDuration(500)
   .elasticY(true)
-  .x(d3.time.scale().domain([new Date(2015, 5, 1), new Date(2015, 6, 1)]))
+  .x(d3.time.scale().domain([new Date(2015, 5, 1), new Date(2015, 5, 19)]))
   .xUnits(d3.time.days)
   .xAxis()
 
@@ -325,15 +325,15 @@ symptomsTimeChart.on('renderlet.timechart', function(chart, filter) {
 
 //onclick issue maybe fixed here https://github.com/dc-js/dc.js/issues/168
 
-symptomsNavChart.width(800)
-  .height(40)
+symptomsNavChart.width(1140)
+  .height(60)
   .margins({top: 0, right: 50, bottom: 20, left: 40})
   .dimension(volumeByHour)
   .group(volumeByHourGroup)
   .centerBar(true)
   .gap(1)
   //.elasticX(true)
-  .x(d3.time.scale().domain([new Date(2015, 5, 1), new Date(2015, 6, 1)]))
+  .x(d3.time.scale().domain([new Date(2015, 5, 1), new Date(2015, 5, 19)]))
   .round(d3.time.days.round)
   .alwaysUseRounding(true)
   .xUnits(d3.time.days);

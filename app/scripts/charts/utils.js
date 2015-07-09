@@ -7,12 +7,12 @@ var setDefaultColors = function(chart, group) {
 function changeDate(timeFrame, chart){
 	switch(timeFrame){
 		case "thisweek":
-			var range = [new Date(2015, 5, 12), new Date(2015, 5, 19)];
-			chart.focus(range); 
+			var range = [new Date(maxDate-7*24*60*60*1000), maxDate];
+			chart.focus(range);
 			break;
 		case "last24":
-			var range = [new Date(2015, 5, 18), new Date(2015, 5, 19)];
-			chart.focus(range); 
+			var range = [new Date(maxDate-1*24*60*60*1000), maxDate];
+			chart.focus(range);
 			break;
 		case "reset":
 			chart.focus(null);

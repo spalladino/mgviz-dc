@@ -1,10 +1,12 @@
 // Maps
+var regions, regionsGroup;
+
 d3.json("data/rio_aps.geojson", function(geojson) {
   var buildMap = function(target, dataset) {
-    var regions = dataset.dimension(function(d) {
+    regions = dataset.dimension(function(d) {
       return d.region;
     });
-    var regionsGroup = regions.group();
+    regionsGroup = regions.group();
 
     var width = 850, height = 350;
     var projection = d3.geo.mercator()

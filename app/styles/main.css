@@ -71,13 +71,12 @@ body {
   margin-bottom: 20px;
 }
 
-.pieCharts {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
 #syndromesTimeSeries, #symptomsTimeSeries {
   g.stack-list path.line {
     stroke-width: 0;
   }
+}
+
+.break {
+  height: 30px;
 }

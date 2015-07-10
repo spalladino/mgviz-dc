@@ -11,6 +11,14 @@ $.ajax('data/syndromes.json', {async: false, ifModified: true, dataType: 'json'}
   syndromesCases = data;
 });
 
+symptomsCases.forEach(function(s) {
+  s.ageGroup = Math.floor(s.age / 10) * 10;
+});
+syndromesCases.forEach(function(s) {
+  s.ageGroup = Math.floor(s.age / 10) * 10;
+});
+
+
 
 // Initialise datasets, dimensions and groups
 

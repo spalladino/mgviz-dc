@@ -3,15 +3,10 @@
 var ageSteps = [5,10,15,20,25,30,40,50,60];
 var buildAgeChart = function(target, dataset) {
   var dimension = dataset.dimension(function(d) {
-    return d.age;
+    return d.ageGroup;
   });
 
-  var group = dimension.group(function(age) {
-    var index = _.findIndex(ageSteps, function(step) {
-      return age <= step;
-    });
-    return index < 0 ? ageSteps.length : index;
-  })
+  var group = dimension.group(function(d) { return Math.floor(d / 10) * 10; });
 
   var chart = dc.rowChart(target)
     .width(400)
@@ -21,15 +16,8 @@ var buildAgeChart = function(target, dataset) {
     .colorAccessor(function (d) { return d.value; })
     .group(group)
     .label(function(d) {
-      var index = d.key;
-      if (index == 0) {
-        return "< " + String(ageSteps[0]);
-      } else  if (index < ageSteps.length) {
-        return String(ageSteps[index-1]) + "-" + String(ageSteps[index]-1);
-      } else {
-        return "> " + String(ageSteps[ageSteps.length-1]);
-      }
-    });
+      return d.key + " - " + (d.key+9);
+    })
 
   setDefaultColors(chart, group);
   return chart;

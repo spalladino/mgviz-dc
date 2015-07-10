@@ -46,7 +46,28 @@
         <h1>Mass Gatherings</h1>
         <p>Dashboard for participatory surveillance data.</p>
         <div class="alerts">
-        Alert on 2015-06-07: <a href="javascript:syndromesChart.filter('Diarreica');regions.filter('A.P. 5.1');dc.redrawAll();">Diarreica, Brasilia</a>
+
+        <div class="alert alert-danger">
+          2014/06/28: <a href="
+          javascript:dc.filterAll();
+          activaTab('symptoms'); 
+          symptomsChart.filter('Diarrhea'); 
+          symptomsRoleChart.filter('Fan'); 
+          symptomsNavTimeChart.focus([new Date(2014,5,25), new Date(2014,5,29)]);
+          dc.redrawAll();"><strong>Fast Increase Diarreica among group Fan</strong></a>
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        </div>
+
+        <div class="alert alert-warning">
+          2014/06/(14-24): <a href="
+          javascript:dc.filterAll();
+          activaTab('syndromes'); 
+          syndromesChart.filter('Exantemática'); 
+          syndromesNavTimeChart.focus([new Date(2014,5,14), new Date(2014,5,24)]);
+          dc.redrawAll();"><strong>Slow Increase Exantemática</strong></a>
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        </div>
+        
         </div>
       </div>
 

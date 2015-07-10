@@ -1,9 +1,6 @@
 // Time series chart
 
-//title - dynamic - "Number of x(syndrome) between x(Date) and y(date)"
-//axes labels
 //histogram button
-//links to times
 
 var buildTimeChart = function(dataset, group, accessor, target, navigation, dateDimension) {
 
@@ -49,7 +46,7 @@ var buildTimeChart = function(dataset, group, accessor, target, navigation, date
     .elasticY(true)
     .x(d3.time.scale())
     .xUnits(d3.time.days)
-    .xAxisLabel('date (' + precision[0] + ')') // (optional) render an axis label below the x axis
+    //.xAxisLabel('date (' + precision[0] + ')') // (optional) render an axis label below the x axis
     .yAxisLabel('no. cases')
     .xAxis();
 

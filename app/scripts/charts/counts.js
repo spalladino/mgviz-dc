@@ -2,7 +2,7 @@
 
 var buildRowChart = function(target, dimension, group) {
   var chart = dc.rowChart(target)
-    .width(280)
+    .width(260)
     .height(289)
     .margins({top: 40, left: 10, right: 10, bottom: 20})
     .colors(classesColorScale)

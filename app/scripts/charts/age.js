@@ -14,9 +14,9 @@ var buildAgeChart = function(target, dataset) {
   })
 
   var chart = dc.rowChart(target)
-    .width(550)
-    .height(400)
-    .margins({top: 30, right: 40, bottom: 30, left: 40})
+    .width(400)
+    .height(300)
+    .margins({top: 50, right: 40, bottom: 30, left: 40})
     .dimension(dimension)
     .colorAccessor(function (d) { return d.value; })
     .group(group)

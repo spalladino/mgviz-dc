@@ -93,6 +93,15 @@
 
           <div class="row">
 
+            <div class="col-md-4">
+              <div id="syndromesAgeChart">
+              <h4 class="text-center">
+              by age
+              <h5 class="text-center"><span class='reset' style='display: none;'>(including: <span class='filter'></span>)</span></h5>
+              </h4>
+              </div>
+            </div>
+
             <div id="syndromesMap" class="map col-md-8">
               <h4 class="text-center">
               by province
@@ -101,14 +110,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-6">
-              <div id="syndromesAgeChart">
-              <h4 class="text-center">
-              by age
-              <h5 class="text-center"><span class='reset' style='display: none;'>(including: <span class='filter'></span>)</span></h5>
-              </h4>
-              </div>
-            </div>
+
             <div class="col-md-6">
               <div id="syndromesGenderChart">
               <h4 class="text-center">
@@ -117,7 +119,17 @@
               </h4>
               </div>
             </div>
+
+            <div class="col-md-6">
+              <div id="syndromesRoleChart">
+                <h4 class="text-center">
+                by role
+                <h5 class="text-center"><span class='reset' style='display: none;'>(role: <span class='filter'></span>)</span></h5>
+                </h4>
+              </div>
+            </div>
           </div>
+
           <div class="row">
             <table id="syndromesCaseList">
               <thead>
@@ -170,6 +182,15 @@
 
           <div class="row">
 
+            <div class="col-md-4">
+              <div id="symptomsAgeChart">
+              <h4 class="text-center">
+              by age
+              <h5 class="text-center"><span class='reset' style='display: none;'>(including: <span class='filter'></span>)</span></h5>
+              </h4>
+              </div>
+            </div>
+
             <div id="symptomsMap" class="map col-md-8">
               <h4 class="text-center">
               by province
@@ -178,15 +199,8 @@
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-md-6">
-              <div id="symptomsAgeChart">
-              <h4 class="text-center">
-              by age
-              <h5 class="text-center"><span class='reset' style='display: none;'>(including: <span class='filter'></span>)</span></h5>
-              </h4>
-              </div>
-            </div>
+          <div class="row pieCharts">
+
             <div class="col-md-6">
               <div id="symptomsGenderChart">
               <h4 class="text-center">
@@ -195,7 +209,17 @@
               </h4>
               </div>
             </div>
+
+            <div class="col-md-6">
+              <div id="symptomsRoleChart">
+                <h4 class="text-center">
+                by role
+                <h5 class="text-center"><span class='reset' style='display: none;'>(role: <span class='filter'></span>)</span></h5>
+                </h4>
+              </div>
+            </div>
           </div>
+
           <div class="row">
             <table id="symptomsCaseList">
               <thead>
@@ -263,7 +287,7 @@
     <script src="scripts/charts/counts.js"></script>
     <script src="scripts/charts/map.js"></script>
     <script src="scripts/charts/age.js"></script>
-    <script src="scripts/charts/gender.js"></script>
+    <script src="scripts/charts/demographics.js"></script>
     <script src="scripts/charts/timeseries.js"></script>
     <script src="scripts/charts/table.js"></script>
     <script src="scripts/main.js"></script>

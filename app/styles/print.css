@@ -2,7 +2,7 @@
   .jumbotron {
     padding: 0px;
   }
-  
+
   .nav-tabs {
     display: none;
   }
@@ -12,18 +12,27 @@
     opacity: 1;
     visibility: visible;
   }
-  
+
   #syndromesCount, #symptomsCount {
     float: none;
   }
-  
+
+  #syndromesChart, #symptomsChart {
+    display: none;
+  }
+
   .print-only {
     display: block;
   }
-  
+
   .no-print {
     display: none;
   }
+
+  .print-new-page {
+    page-break-before: always;
+  }
+
 }
 
 @media screen {

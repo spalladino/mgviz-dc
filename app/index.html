@@ -19,13 +19,11 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/print.css">
     <!-- endbuild -->
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
-
-    <link rel="stylesheet" href="styles/print.css">
-
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -158,7 +156,7 @@
 
           <div class="row break"></div>
 
-          <div class="row">
+          <div class="row print-new-page">
             <div class="col-md-12">
               <table id="syndromesCaseList" class="table table-striped table-condensed">
                 <thead>
@@ -179,7 +177,7 @@
 
 
 
-        <div role="tabpanel" class="tab-pane" id="symptoms">
+        <div role="tabpanel" class="tab-pane print-new-page" id="symptoms">
           <div class="row">
             <div class="col-md-12 text-right" id='symptomsCount'>
               Viewing <span class='filter-count'></span> of <span class='total-count'></span> total symptoms cases<span class="no-print"> | <a href="javascript:dc.filterAll(); dc.redrawAll();">Show All</a> | <a href="javascript:exportSymptoms();">Export (.csv)</a></span>
@@ -252,7 +250,7 @@
 
           </div>
 
-          <div class="row">
+          <div class="row print-new-page">
             <table id="symptomsCaseList" class="table table-striped table-condensed">
               <thead>
                 <tr>
@@ -323,9 +321,8 @@
     <script src="scripts/charts/timeseries.js"></script>
     <script src="scripts/charts/table.js"></script>
     <script src="scripts/main.js"></script>
-    <!-- endbuild -->
-
     <script src="scripts/print.js"></script>
+    <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

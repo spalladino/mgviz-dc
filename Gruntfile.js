@@ -314,6 +314,11 @@ module.exports = function (grunt) {
           cwd: 'bower_components/bootstrap/dist',
           src: 'fonts/*',
           dest: '<%= config.dist %>'
+        }, {
+          expand: true,
+          cwd: '<%= config.app %>/data',
+          dest: '<%= config.dist %>/data',
+          src: ['*.json', '*.geojson']
         }]
       },
       styles: {

@@ -30,8 +30,8 @@ var userAlerts = [{"alert_date":"2015-06-07","alert_syndrome":"Diarreica","alert
 
 
 var setFilters = function(filters) {
-syndromesChart.filter(filters.syndrome);
-dc.redrawAll();
+  syndromesChart.filter(filters.syndrome);
+  dc.redrawAll();
 //  if (filters.syndrome) {
 //    syndromesChart.filter(filters.syndrome);
 //    dc.redrawAll();
@@ -47,3 +47,4 @@ dc.redrawAll();
 
 dc.renderAll();
 
+window.setTimeout(function() { dc.redrawAll(); }, 1000);

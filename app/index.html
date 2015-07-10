@@ -74,21 +74,34 @@
             </div>
           </div>
           <div class="row">
-            <div id="syndromesTimeSeries">
-              <h4 class="text-center">
-              number of cases over time
-              <h5 class="text-center"><span class='reset' style='display: none;'>(in period <span class='filter'></span>)</span></h5>
-              </h4>
+            <div class="col-md-9">
+              <div id="syndromesTimeSeries">
+                <h4 class="text-center">
+                Cases of syndromes over time
+                <h5 class="text-center"><span class='reset' style='display: none;'>(in period <span class='filter'></span>)</span></h5>
+                </h4>
+              </div>
+              <div id="syndromesTimeNavigation"></div>
             </div>
-            <div id="syndromesTimeNavigation"></div>
-          </div>
-          <div class="row">
-            <div class="col-md-4" id="syndromesChart">
+            <div class="col-md-3" id="syndromesChart">
               <h4 class="text-center">
-              by symptom
+              by syndrome
               <h5 class="text-center"><span class='reset' style='display: none;'>(including: <span class='filter'></span>)</span></h5>
               </h4>
             </div>
+          </div>
+
+          <div class="row">
+
+            <div class="col-md-4">
+              <div id="syndromesAgeChart">
+              <h4 class="text-center">
+              by age
+              <h5 class="text-center"><span class='reset' style='display: none;'>(including: <span class='filter'></span>)</span></h5>
+              </h4>
+              </div>
+            </div>
+
             <div id="syndromesMap" class="map col-md-8">
               <h4 class="text-center">
               by province
@@ -97,14 +110,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-6">
-              <div id="syndromesAgeChart">
-              <h4 class="text-center">
-              by age
-              <h5 class="text-center"><span class='reset' style='display: none;'>(including: <span class='filter'></span>)</span></h5>
-              </h4>
-              </div>
-            </div>
+
             <div class="col-md-6">
               <div id="syndromesGenderChart">
               <h4 class="text-center">
@@ -113,7 +119,17 @@
               </h4>
               </div>
             </div>
+
+            <div class="col-md-6">
+              <div id="syndromesRoleChart">
+                <h4 class="text-center">
+                by role
+                <h5 class="text-center"><span class='reset' style='display: none;'>(role: <span class='filter'></span>)</span></h5>
+                </h4>
+              </div>
+            </div>
           </div>
+
           <div class="row">
             <table id="syndromesCaseList">
               <thead>
@@ -121,7 +137,7 @@
                 <th width="150px">User ID</th>
                 <th width="150px">Gender</th>
                 <th width="150px">Age</th>
-                <th width="150px">Symptom</th>
+                <th width="150px">Syndromes</th>
                 <th width="150px">#Days</th>
                 <th width="150px">Date</th>
                 <th width="150px">Show in Map</th>
@@ -137,46 +153,36 @@
           <div class="row">
             <div id='symptomsCount'>
               <div class="col-md-6 text-left">
-              <a href="javascript:changeDate('thisweek', syndromesNavTimeChart)"> Current Week </a>|
-              <a href="javascript:changeDate('last24', syndromesNavTimeChart)"> Last 24 hours </a>|
-              <a href="javascript:changeDate('reset', syndromesNavTimeChart)"> All Time </a>
+              <a href="javascript:changeDate('thisweek', symptomsNavTimeChart)"> Current Week </a>|
+              <a href="javascript:changeDate('last24', symptomsNavTimeChart)"> Last 24 hours </a>|
+              <a href="javascript:changeDate('reset', symptomsNavTimeChart)"> All Time </a>
               </div>
               <div class="col-md-6 text-right">
-              Viewing <span class='filter-count'></span> cases out of <span class='total-count'></span> total symptoms cases<span class="no-print"> | <a href="javascript:dc.filterAll(); dc.redrawAll();">Reset All</a> | <a href="javascript:exportSyndromes();">Export (.csv)</a></span>
+              Viewing <span class='filter-count'></span> cases out of <span class='total-count'></span> total symptoms cases<span class="no-print"> | <a href="javascript:dc.filterAll(); dc.redrawAll();">Reset All</a> | <a href="javascript:exportSymptoms();">Export (.csv)</a></span>
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-8">
-            <div id="symptomsTimeSeries">
-              <h4 class="text-center">
-              number of cases over time
-              <h5 class="text-center"><span class='reset' style='display: none;'>(in period <span class='filter'></span>)</span></h5>
-              </h4>
+            <div class="col-md-9">
+              <div id="symptomsTimeSeries">
+                <h4 class="text-center">
+                Cases of symptoms over time
+                <h5 class="text-center"><span class='reset' style='display: none;'>(in period <span class='filter'></span>)</span></h5>
+                </h4>
+              </div>
+              <div id="symptomsTimeNavigation"></div>
             </div>
-            <div id="symptomsTimeNavigation"></div>
-            </div>
-            
-            <div class="col-md-4">
-            Test
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4" id="symptomsChart">
+            <div class="col-md-3" id="symptomsChart">
               <h4 class="text-center">
               by symptom
               <h5 class="text-center"><span class='reset' style='display: none;'>(including: <span class='filter'></span>)</span></h5>
               </h4>
             </div>
-            <div id="symptomsMap" class="map col-md-8">
-              <h4 class="text-center">
-              by province
-              <h5 class="text-center"><span class='reset' style='display: none;'>(in area(s): <span class='filter'></span>)</span></h5>
-              </h4>
-            </div>
           </div>
+
           <div class="row">
-            <div class="col-md-6">
+
+            <div class="col-md-4">
               <div id="symptomsAgeChart">
               <h4 class="text-center">
               by age
@@ -184,6 +190,17 @@
               </h4>
               </div>
             </div>
+
+            <div id="symptomsMap" class="map col-md-8">
+              <h4 class="text-center">
+              by province
+              <h5 class="text-center"><span class='reset' style='display: none;'>(in area(s): <span class='filter'></span>)</span></h5>
+              </h4>
+            </div>
+          </div>
+
+          <div class="row pieCharts">
+
             <div class="col-md-6">
               <div id="symptomsGenderChart">
               <h4 class="text-center">
@@ -192,7 +209,17 @@
               </h4>
               </div>
             </div>
+
+            <div class="col-md-6">
+              <div id="symptomsRoleChart">
+                <h4 class="text-center">
+                by role
+                <h5 class="text-center"><span class='reset' style='display: none;'>(role: <span class='filter'></span>)</span></h5>
+                </h4>
+              </div>
+            </div>
           </div>
+
           <div class="row">
             <table id="symptomsCaseList">
               <thead>
@@ -200,7 +227,7 @@
                 <th width="150px">User ID</th>
                 <th width="150px">Gender</th>
                 <th width="150px">Age</th>
-                <th width="150px">Syndrom</th>
+                <th width="150px">Symptom</th>
                 <th width="150px">#Days</th>
                 <th width="150px">Date</th>
                 <th width="150px">Show in Map</th>
@@ -254,12 +281,13 @@
 
 
     <!-- build:js scripts/main.js -->
+    <script src="scripts/settings.js"></script>
     <script src="scripts/data.js"></script>
     <script src="scripts/charts/utils.js"></script>
     <script src="scripts/charts/counts.js"></script>
     <script src="scripts/charts/map.js"></script>
     <script src="scripts/charts/age.js"></script>
-    <script src="scripts/charts/gender.js"></script>
+    <script src="scripts/charts/demographics.js"></script>
     <script src="scripts/charts/timeseries.js"></script>
     <script src="scripts/charts/table.js"></script>
     <script src="scripts/main.js"></script>

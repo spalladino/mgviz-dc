@@ -34,10 +34,10 @@ var buildTimeChart = function(dataset, group, accessor, target, navigation, date
       function() { return {}; }
     );
 
-  var observed_symptoms = group.top(Infinity).map(function(obj){ return obj.key; });
+  var observed_symptoms = group.all().map(function(obj){ return obj.key; });
 
   symptomsTimeChart
-    .width(900)
+    .width(950)
     .height(300)
     .margins({top: 10, right: 120, bottom: 20, left: 40})
     .rangeChart(symptomsNavChart)
@@ -51,15 +51,11 @@ var buildTimeChart = function(dataset, group, accessor, target, navigation, date
     .xAxis();
 
   var theLines = [];
-  var colorsSymptoms = ["red", "green", "blue", "yellow", "black", "orange", "purple"];
-  //for now we just give a few colors to choose from? who knows what to do?
-  //maybe some hash function on the name of the symptom that maps name -> color
-
   observed_symptoms.forEach(function(field, i){
     theLines.push(
       dc.lineChart(symptomsTimeChart)
         .dimension(volumeByHour)
-        .colors(colorsSymptoms[i])
+        .colors(classesColorScale(i))
         .group(symptomGroupsTimeSeries, observed_symptoms[i], function(d){
           return d.value[field] || null;
         })
@@ -77,21 +73,18 @@ var buildTimeChart = function(dataset, group, accessor, target, navigation, date
   symptomsTimeChart
     .rangeChart(symptomsNavChart)
     .transitionDuration(100)
-    .elasticY(true)
-    .x(d3.time.scale().domain([new Date(2015, 5, 1), new Date(2015, 5, 19)]))
-    .legend(dc.legend().x(800).y(20).itemHeight(30).gap(10))
+    .x(d3.time.scale().domain([minDate, maxDate]))
     .xUnits(d3.time.days)
     .xAxis()
 
-  symptomsNavChart.width(800)
+  symptomsNavChart.width(850)
     .height(60)
     .margins({top: 10, right: 20, bottom: 20, left: 50})
     .dimension(volumeByHour)
     .group(volumeByHourGroup)
     .centerBar(true)
     .gap(1)
-    .elasticX(true)
-    .x(d3.time.scale().domain([new Date(2015, 5, 1), new Date(2015, 8, 30)]))
+    .x(d3.time.scale().domain([minDate, maxDate]))
     .round(d3.time.days.round)
     .alwaysUseRounding(true)
     .xUnits(d3.time.days)
@@ -149,6 +142,7 @@ OLD STACKED CHARTS, DO NOT REMOVE AT THE MOMEN
   var first_symptom = observed_symptoms[0];
   observed_symptoms.shift();
 
+
   symptomsTimeChart
     .width(1100)
     .height(300)
@@ -165,6 +159,8 @@ OLD STACKED CHARTS, DO NOT REMOVE AT THE MOMEN
     })
     .mouseZoomable(true)
 
+
+
   observed_symptoms.forEach(function(field, i){
     symptomsTimeChart.stack(symptomGroupsTimeSeries, observed_symptoms[i], function(d){
       return d.value[field] || null;
@@ -177,7 +173,7 @@ OLD STACKED CHARTS, DO NOT REMOVE AT THE MOMEN
     .elasticY(true)
     .x(d3.time.scale().domain([new Date(2015, 5, 1), new Date(2015, 5, 19)]))
     .xUnits(d3.time.days)
-    .xAxis()
+    .xAxis();
 
   //This hack is terrible but dives into d3 to find the area entities in the
   //svg and makes them clickable.
@@ -187,7 +183,15 @@ OLD STACKED CHARTS, DO NOT REMOVE AT THE MOMEN
           window[accessor+ "sChart"].filter([d.name]);
           dc.redrawAll();
         }
-      ));
+      ))
+      .style("fill", function(d,index) {
+        console.log(d);
+        console.log(index);
+        return classesColorScale(index);
+      })
+      .style("stroke", function(d,index) {
+        return 'gray';
+      })
     });
 
   //onclick issue maybe fixed here https://github.com/dc-js/dc.js/issues/168
@@ -210,4 +214,3 @@ OLD STACKED CHARTS, DO NOT REMOVE AT THE MOMEN
 
 var syndromesNavTimeChart = buildTimeChart(syndromesDataset, syndromesGroup, 'syndrome', '#syndromesTimeSeries', '#syndromesTimeNavigation', syndromesDateDimension);
 var symptomsNavTimeChart = buildTimeChart(symptomsDataset, symptomsGroup, 'symptom', '#symptomsTimeSeries', '#symptomsTimeNavigation', symptomsDateDimension);
-

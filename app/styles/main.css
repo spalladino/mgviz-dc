@@ -71,7 +71,13 @@ body {
   margin: 10px 30px;
 }
 
-#syndromesGenderChart, #symptomsGenderChart {
-  margin-top: 100px;
-  margin-left: 100px;
+.pieCharts {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#syndromesTimeSeries, #symptomsTimeSeries {
+  g.stack-list path.line {
+    stroke-width: 0;
+  }
 }

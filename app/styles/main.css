@@ -80,3 +80,27 @@ body {
 .break {
   height: 30px;
 }
+body {
+  background: url(../img/squared_metal.png);
+}
+.custom-background {
+  background-color: rgba(255,255,255,0.6);
+}
+.jumbotron {
+  background: none;
+  border-bottom: none; 
+}
+.header {
+  padding-top: 20px;
+}
+.nav-tabs {
+  border-bottom: 2px solid #dddddd;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+ background-color: #F2F2F2;
+}
+#symptomsChart, #syndromesChart {
+  background-color: rgba(0,0,0,0.3);
+  position: relative;
+  right: 20px;
+}

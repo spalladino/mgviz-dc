@@ -18,7 +18,7 @@ var buildDemographicPieChart = function(target, dataset, variable) {
 buildDemographicPieChart('#syndromesGenderChart', syndromesDataset, 'gender');
 buildDemographicPieChart('#symptomsGenderChart', symptomsDataset, 'gender');
 
-buildDemographicPieChart('#syndromesRoleChart', syndromesDataset, 'role');
-buildDemographicPieChart('#symptomsRoleChart', symptomsDataset, 'role');
+var syndromesRoleChart = buildDemographicPieChart('#syndromesRoleChart', syndromesDataset, 'role');
+var symptomsRoleChart = buildDemographicPieChart('#symptomsRoleChart', symptomsDataset, 'role');
 
 

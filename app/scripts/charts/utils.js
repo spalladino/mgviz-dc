@@ -22,3 +22,7 @@ function changeDate(timeFrame, chart){
 }
 
 var classesColorScale = d3.scale.category10();
+
+function activaTab(tab){
+    $('.nav-tabs a[href="#' + tab + '"]').tab('show');
+};

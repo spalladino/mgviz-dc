@@ -15,7 +15,8 @@
     "region": "A.P. 1.0",
     "foreigner": "0",
     "role": "Worker",
-    "syndrome": "Exantemática"
+    "syndrome": "Exantemática",
+    "needs_help": "1"
   },
   {
     "user_id": "203",
@@ -33,7 +34,8 @@
     "region": "A.P. 3.2",
     "foreigner": "1",
     "role": "Fan",
-    "syndrome": "Diarreica"
+    "syndrome": "Diarreica",
+    "needs_help": "1"
   },
   {
     "user_id": "243",
@@ -51,7 +53,8 @@
     "region": "A.P. 5.2",
     "foreigner": "1",
     "role": "Worker",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "1"
   },
   {
     "user_id": "396",
@@ -69,7 +72,8 @@
     "region": "A.P. 4.0",
     "foreigner": "1",
     "role": "Fan",
-    "syndrome": "Diarreica"
+    "syndrome": "Diarreica",
+    "needs_help": "1"
   },
   {
     "user_id": "854",
@@ -87,7 +91,8 @@
     "region": "A.P. 3.1",
     "foreigner": "0",
     "role": "Fan",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "1"
   },
   {
     "user_id": "1160",
@@ -105,7 +110,8 @@
     "region": "A.P. 5.3",
     "foreigner": "0",
     "role": "Fan",
-    "syndrome": "Exantemática"
+    "syndrome": "Exantemática",
+    "needs_help": "1"
   },
   {
     "user_id": "1600",
@@ -123,7 +129,8 @@
     "region": "A.P. 2.2",
     "foreigner": "0",
     "role": "Fan",
-    "syndrome": "Exantemática"
+    "syndrome": "Exantemática",
+    "needs_help": "1"
   },
   {
     "user_id": "1682",
@@ -141,7 +148,8 @@
     "region": "A.P. 3.3",
     "foreigner": "0",
     "role": "Fan",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "1"
   },
   {
     "user_id": "1702",
@@ -159,7 +167,8 @@
     "region": "A.P. 5.1",
     "foreigner": "1",
     "role": "Fan",
-    "syndrome": "Exantemática"
+    "syndrome": "Exantemática",
+    "needs_help": "1"
   },
   {
     "user_id": "1790",
@@ -177,7 +186,8 @@
     "region": "A.P. 5.3",
     "foreigner": "1",
     "role": "Fan",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "1"
   },
   {
     "user_id": "1794",
@@ -195,7 +205,8 @@
     "region": "A.P. 3.3",
     "foreigner": "1",
     "role": "Worker",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "1"
   },
   {
     "user_id": "1830",
@@ -213,7 +224,8 @@
     "region": "A.P. 3.2",
     "foreigner": "1",
     "role": "Worker",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "1"
   },
   {
     "user_id": "1881",
@@ -231,7 +243,8 @@
     "region": "A.P. 1.0",
     "foreigner": "0",
     "role": "Fan",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "1"
   },
   {
     "user_id": "2326",
@@ -249,7 +262,8 @@
     "region": "A.P. 5.3",
     "foreigner": "1",
     "role": "Fan",
-    "syndrome": "Exantemática"
+    "syndrome": "Exantemática",
+    "needs_help": "1"
   },
   {
     "user_id": "2427",
@@ -267,7 +281,8 @@
     "region": "A.P. 5.1",
     "foreigner": "1",
     "role": "Athlete",
-    "syndrome": "Exantemática"
+    "syndrome": "Exantemática",
+    "needs_help": "1"
   },
   {
     "user_id": "2445",
@@ -285,7 +300,8 @@
     "region": "A.P. 5.2",
     "foreigner": "1",
     "role": "Fan",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "1"
   },
   {
     "user_id": "2471",
@@ -303,7 +319,8 @@
     "region": "A.P. 2.2",
     "foreigner": "1",
     "role": "Fan",
-    "syndrome": "Exantemática"
+    "syndrome": "Exantemática",
+    "needs_help": "1"
   },
   {
     "user_id": "2493",
@@ -321,7 +338,8 @@
     "region": "A.P. 3.1",
     "foreigner": "1",
     "role": "Fan",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "1"
   },
   {
     "user_id": "2506",
@@ -339,7 +357,8 @@
     "region": "A.P. 4.0",
     "foreigner": "0",
     "role": "Fan",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "1"
   },
   {
     "user_id": "2749",
@@ -357,7 +376,8 @@
     "region": "A.P. 2.2",
     "foreigner": "1",
     "role": "Worker",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "1"
   },
   {
     "user_id": "2853",
@@ -375,7 +395,8 @@
     "region": "A.P. 3.1",
     "foreigner": "0",
     "role": "Fan",
-    "syndrome": "Exantemática"
+    "syndrome": "Exantemática",
+    "needs_help": "1"
   },
   {
     "user_id": "2945",
@@ -393,7 +414,8 @@
     "region": "A.P. 1.0",
     "foreigner": "0",
     "role": "Fan",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "1"
   },
   {
     "user_id": "3254",
@@ -411,7 +433,8 @@
     "region": "A.P. 2.1",
     "foreigner": "0",
     "role": "Fan",
-    "syndrome": "Exantemática"
+    "syndrome": "Exantemática",
+    "needs_help": "1"
   },
   {
     "user_id": "3295",
@@ -429,7 +452,8 @@
     "region": "A.P. 1.0",
     "foreigner": "0",
     "role": "Fan",
-    "syndrome": "Diarreica"
+    "syndrome": "Diarreica",
+    "needs_help": "1"
   },
   {
     "user_id": "3391",
@@ -447,7 +471,8 @@
     "region": "A.P. 5.1",
     "foreigner": "1",
     "role": "Fan",
-    "syndrome": "Exantemática"
+    "syndrome": "Exantemática",
+    "needs_help": "1"
   },
   {
     "user_id": "3619",
@@ -465,7 +490,8 @@
     "region": "A.P. 3.3",
     "foreigner": "0",
     "role": "Athlete",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "1"
   },
   {
     "user_id": "3709",
@@ -483,7 +509,8 @@
     "region": "A.P. 5.1",
     "foreigner": "1",
     "role": "Fan",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "1"
   },
   {
     "user_id": "3739",
@@ -501,7 +528,8 @@
     "region": "A.P. 3.1",
     "foreigner": "0",
     "role": "Worker",
-    "syndrome": "Diarreica"
+    "syndrome": "Diarreica",
+    "needs_help": "1"
   },
   {
     "user_id": "3868",
@@ -519,7 +547,8 @@
     "region": "A.P. 3.3",
     "foreigner": "0",
     "role": "Fan",
-    "syndrome": "Exantemática"
+    "syndrome": "Exantemática",
+    "needs_help": "1"
   },
   {
     "user_id": "4001",
@@ -537,7 +566,8 @@
     "region": "A.P. 2.1",
     "foreigner": "0",
     "role": "Fan",
-    "syndrome": "Exantemática"
+    "syndrome": "Exantemática",
+    "needs_help": "1"
   },
   {
     "user_id": "4061",
@@ -555,7 +585,8 @@
     "region": "A.P. 2.1",
     "foreigner": "0",
     "role": "Fan",
-    "syndrome": "Exantemática"
+    "syndrome": "Exantemática",
+    "needs_help": "1"
   },
   {
     "user_id": "4176",
@@ -573,7 +604,8 @@
     "region": "A.P. 1.0",
     "foreigner": "1",
     "role": "Fan",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "0"
   },
   {
     "user_id": "4325",
@@ -591,7 +623,8 @@
     "region": "A.P. 3.2",
     "foreigner": "1",
     "role": "Fan",
-    "syndrome": "Exantemática"
+    "syndrome": "Exantemática",
+    "needs_help": "0"
   },
   {
     "user_id": "4400",
@@ -609,7 +642,8 @@
     "region": "A.P. 2.2",
     "foreigner": "1",
     "role": "Fan",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "0"
   },
   {
     "user_id": "4487",
@@ -627,7 +661,8 @@
     "region": "A.P. 2.1",
     "foreigner": "0",
     "role": "Fan",
-    "syndrome": "Diarreica"
+    "syndrome": "Diarreica",
+    "needs_help": "0"
   },
   {
     "user_id": "4510",
@@ -645,7 +680,8 @@
     "region": "A.P. 2.1",
     "foreigner": "1",
     "role": "Worker",
-    "syndrome": "Exantemática"
+    "syndrome": "Exantemática",
+    "needs_help": "0"
   },
   {
     "user_id": "4543",
@@ -663,7 +699,8 @@
     "region": "A.P. 3.3",
     "foreigner": "1",
     "role": "Fan",
-    "syndrome": "Diarreica"
+    "syndrome": "Diarreica",
+    "needs_help": "0"
   },
   {
     "user_id": "4668",
@@ -681,7 +718,8 @@
     "region": "A.P. 3.3",
     "foreigner": "1",
     "role": "Fan",
-    "syndrome": "Exantemática"
+    "syndrome": "Exantemática",
+    "needs_help": "0"
   },
   {
     "user_id": "4791",
@@ -699,7 +737,8 @@
     "region": "A.P. 5.2",
     "foreigner": "0",
     "role": "Fan",
-    "syndrome": "Exantemática"
+    "syndrome": "Exantemática",
+    "needs_help": "0"
   },
   {
     "user_id": "4903",
@@ -717,7 +756,8 @@
     "region": "A.P. 3.2",
     "foreigner": "1",
     "role": "Athlete",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "0"
   },
   {
     "user_id": "5264",
@@ -735,7 +775,8 @@
     "region": "A.P. 1.0",
     "foreigner": "0",
     "role": "Fan",
-    "syndrome": "Diarreica"
+    "syndrome": "Diarreica",
+    "needs_help": "0"
   },
   {
     "user_id": "5509",
@@ -753,7 +794,8 @@
     "region": "A.P. 5.2",
     "foreigner": "1",
     "role": "Fan",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "0"
   },
   {
     "user_id": "5550",
@@ -771,7 +813,8 @@
     "region": "A.P. 1.0",
     "foreigner": "1",
     "role": "Fan",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "0"
   },
   {
     "user_id": "5614",
@@ -789,7 +832,8 @@
     "region": "A.P. 3.1",
     "foreigner": "0",
     "role": "Fan",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "0"
   },
   {
     "user_id": "5628",
@@ -807,7 +851,8 @@
     "region": "A.P. 3.3",
     "foreigner": "1",
     "role": "Fan",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "0"
   },
   {
     "user_id": "5649",
@@ -825,7 +870,8 @@
     "region": "A.P. 4.0",
     "foreigner": "1",
     "role": "Worker",
-    "syndrome": "Exantemática"
+    "syndrome": "Exantemática",
+    "needs_help": "0"
   },
   {
     "user_id": "5681",
@@ -843,7 +889,8 @@
     "region": "A.P. 1.0",
     "foreigner": "1",
     "role": "Worker",
-    "syndrome": "Exantemática"
+    "syndrome": "Exantemática",
+    "needs_help": "0"
   },
   {
     "user_id": "5777",
@@ -861,7 +908,8 @@
     "region": "A.P. 5.2",
     "foreigner": "1",
     "role": "Fan",
-    "syndrome": "Exantemática"
+    "syndrome": "Exantemática",
+    "needs_help": "0"
   },
   {
     "user_id": "5875",
@@ -879,7 +927,8 @@
     "region": "A.P. 2.1",
     "foreigner": "1",
     "role": "Fan",
-    "syndrome": "Exantemática"
+    "syndrome": "Exantemática",
+    "needs_help": "0"
   },
   {
     "user_id": "5974",
@@ -897,7 +946,8 @@
     "region": "A.P. 3.2",
     "foreigner": "0",
     "role": "Fan",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "0"
   },
   {
     "user_id": "6064",
@@ -915,7 +965,8 @@
     "region": "A.P. 3.2",
     "foreigner": "1",
     "role": "Fan",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "0"
   },
   {
     "user_id": "6113",
@@ -933,7 +984,8 @@
     "region": "A.P. 5.2",
     "foreigner": "1",
     "role": "Fan",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "0"
   },
   {
     "user_id": "6221",
@@ -951,7 +1003,8 @@
     "region": "A.P. 3.2",
     "foreigner": "1",
     "role": "Fan",
-    "syndrome": "Exantemática"
+    "syndrome": "Exantemática",
+    "needs_help": "0"
   },
   {
     "user_id": "6394",
@@ -969,7 +1022,8 @@
     "region": "A.P. 3.2",
     "foreigner": "1",
     "role": "Fan",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "0"
   },
   {
     "user_id": "6569",
@@ -987,7 +1041,8 @@
     "region": "A.P. 5.1",
     "foreigner": "1",
     "role": "Fan",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "0"
   },
   {
     "user_id": "6677",
@@ -1005,7 +1060,8 @@
     "region": "A.P. 3.2",
     "foreigner": "1",
     "role": "Fan",
-    "syndrome": "Exantemática"
+    "syndrome": "Exantemática",
+    "needs_help": "0"
   },
   {
     "user_id": "6800",
@@ -1023,7 +1079,8 @@
     "region": "A.P. 5.1",
     "foreigner": "1",
     "role": "Athlete",
-    "syndrome": "Exantemática"
+    "syndrome": "Exantemática",
+    "needs_help": "0"
   },
   {
     "user_id": "7132",
@@ -1041,7 +1098,8 @@
     "region": "A.P. 5.2",
     "foreigner": "0",
     "role": "Fan",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "0"
   },
   {
     "user_id": "7142",
@@ -1059,7 +1117,8 @@
     "region": "A.P. 3.2",
     "foreigner": "0",
     "role": "Fan",
-    "syndrome": "Exantemática"
+    "syndrome": "Exantemática",
+    "needs_help": "0"
   },
   {
     "user_id": "7202",
@@ -1077,7 +1136,8 @@
     "region": "A.P. 5.2",
     "foreigner": "0",
     "role": "Fan",
-    "syndrome": "Exantemática"
+    "syndrome": "Exantemática",
+    "needs_help": "0"
   },
   {
     "user_id": "7204",
@@ -1095,7 +1155,8 @@
     "region": "A.P. 1.0",
     "foreigner": "0",
     "role": "Fan",
-    "syndrome": "Diarreica"
+    "syndrome": "Diarreica",
+    "needs_help": "0"
   },
   {
     "user_id": "7423",
@@ -1113,7 +1174,8 @@
     "region": "A.P. 4.0",
     "foreigner": "1",
     "role": "Fan",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "0"
   },
   {
     "user_id": "7426",
@@ -1131,6 +1193,7 @@
     "region": "A.P. 2.1",
     "foreigner": "1",
     "role": "Athlete",
-    "syndrome": "Respiratória"
+    "syndrome": "Respiratória",
+    "needs_help": "0"
   }
 ]

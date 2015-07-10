@@ -77,6 +77,12 @@ body {
   }
 }
 
+.charts-row {
+  margin-bottom: 60px;
+}
+
 .break {
   height: 30px;
 }
+
+

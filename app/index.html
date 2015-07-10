@@ -89,7 +89,7 @@
               </div>
             </div>
           <!-- </div> -->
-          <div class="row">
+          <div class="row charts-row">
             <div class="col-md-9">
               <div id="syndromesTimeSeries">
                 <h4 class="text-center">Cases of syndromes over time</h4>
@@ -108,15 +108,23 @@
             </div>
           </div>
 
-          <div class="row break"></div>
-
-          <div class="row">
-            <div class="col-md-6">
+          <div class="row charts-row">
+           <div class="col-md-4">
               <div id="syndromesAgeChart">
               <h4 class="text-center">by age</h4>
               <h5 class="text-center">&nbsp;<span class='reset' style='display: none;'>(including: <span class='filter'></span>)</span></h5>
               </div>
             </div>
+
+            <div id="syndromesMap" class="map col-md-8">
+              <h4 class="text-center">by province</h4>
+              <h5 class="text-center">&nbsp;<span class='reset' style='display: none;'>(in area(s): <span class='filter'></span>)</span></h5>
+            </div>
+          </div>
+
+          <div class="row break"></div>
+
+          <div class="row charts-row">
 
             <div class="col-md-3">
               <div id="syndromesGenderChart">
@@ -131,11 +139,19 @@
                 <h5 class="text-center">&nbsp;<span class='reset' style='display: none;'>(role: <span class='filter'></span>)</span></h5>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div id="syndromesMap" class="map col-md-12">
-              <h4 class="text-center">by province</h4>
-              <h5 class="text-center">&nbsp;<span class='reset' style='display: none;'>(in area(s): <span class='filter'></span>)</span></h5>
+
+            <div class="col-md-3">
+              <div id="syndromesNeedsHelpChart">
+                <h4 class="text-center">by help needed</h4>
+                <h5 class="text-center">&nbsp;<span class='reset' style='display: none;'>(needs help: <span class='filter'></span>)</span></h5>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div id="syndromesForeignerChart">
+                <h4 class="text-center">by origin</h4>
+                <h5 class="text-center">&nbsp;<span class='reset' style='display: none;'>(origin: <span class='filter'></span>)</span></h5>
+              </div>
             </div>
 
           </div>
@@ -169,7 +185,7 @@
               Viewing <span class='filter-count'></span> of <span class='total-count'></span> total symptoms cases<span class="no-print"> | <a href="javascript:dc.filterAll(); dc.redrawAll();">Show All</a> | <a href="javascript:exportSymptoms();">Export (.csv)</a></span>
             </div>
           </div>
-          <div class="row">
+          <div class="row charts-row">
             <div class="col-md-9">
               <div id="symptomsTimeSeries">
                 <h4 class="text-center">Cases of symptoms over time</h4>
@@ -188,18 +204,28 @@
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-md-6">
+          <div class="row charts-row">
+           <div class="col-md-4">
               <div id="symptomsAgeChart">
               <h4 class="text-center">by age</h4>
               <h5 class="text-center">&nbsp;<span class='reset' style='display: none;'>(including: <span class='filter'></span>)</span></h5>
               </div>
             </div>
 
+            <div id="symptomsMap" class="map col-md-8">
+              <h4 class="text-center">by province</h4>
+              <h5 class="text-center">&nbsp;<span class='reset' style='display: none;'>(in area(s): <span class='filter'></span>)</span></h5>
+            </div>
+          </div>
+
+          <div class="row break"></div>
+
+          <div class="row charts-row">
+
             <div class="col-md-3">
               <div id="symptomsGenderChart">
-              <h4 class="text-center">by gender</h4>
-              <h5 class="text-center">&nbsp;<span class='reset' style='display: none;'>(gender: <span class='filter'></span>)</span></h5>
+                <h4 class="text-center">by gender</h4>
+                <h5 class="text-center">&nbsp;<span class='reset' style='display: none;'>(gender: <span class='filter'></span>)</span></h5>
               </div>
             </div>
 
@@ -209,13 +235,21 @@
                 <h5 class="text-center">&nbsp;<span class='reset' style='display: none;'>(role: <span class='filter'></span>)</span></h5>
               </div>
             </div>
-          </div>
 
-          <div class="row">
-            <div id="symptomsMap" class="map col-md-12">
-              <h4 class="text-center">by province</h4>
-              <h5 class="text-center">&nbsp;<span class='reset' style='display: none;'>(in area(s): <span class='filter'></span>)</span></h5>
+            <div class="col-md-3">
+              <div id="symptomsNeedsHelpChart">
+                <h4 class="text-center">by help needed</h4>
+                <h5 class="text-center">&nbsp;<span class='reset' style='display: none;'>(needs help: <span class='filter'></span>)</span></h5>
+              </div>
             </div>
+
+            <div class="col-md-3">
+              <div id="symptomsForeignerChart">
+                <h4 class="text-center">by origin</h4>
+                <h5 class="text-center">&nbsp;<span class='reset' style='display: none;'>(origin: <span class='filter'></span>)</span></h5>
+              </div>
+            </div>
+
           </div>
 
           <div class="row">

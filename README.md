@@ -1,6 +1,8 @@
 # mgviz
 
-Visualization platform for Mass Gatherings from EpiHack Rio 2015 using dc.js
+Prototype of analysis and visualization platform for Participatory Surveillance in Mass Gatherings from EpiHack Rio 2015 using dc.js.
+
+Live version available [here](https://spalladino.github.io/mgviz-dc).
 
 ## Build & development
 
@@ -10,6 +12,27 @@ npm install
 bower install
 grunt serve
 ```
+
+## Team
+
+### Developers
+
+* Greg Denehy
+* Eyvind Niklasson
+* James Knox
+* David Murphy
+* Rodrigo Carneiro
+* Santiago Palladino
+
+### Health experts
+
+* Philip Abdelmalik
+* Oswaldo Cruz
+* Manik Ponnaiah
+* Dan Todkill
+* Thomas Mollet
+* Anna Karpushkina
+* Jennifer Olsen
 
 ## License
 

@@ -17,7 +17,7 @@ var buildTable = function(dataset, accessor, dateDimension, target) {
        return diffDays
      },
      function(d) { return d.date_onset; },
-     function(d) { return '<a class="no-print" href=\"http://maps.google.com/maps?z=10&t=m&q=loc:' + String(d.lat_reported) + '+' + String(d.lng_reported) +"\" target=\"_blank\">Map</a>"},
+     function(d) { return '<a class="no-print" href=\"http://maps.google.com/maps?z=10&t=m&q=loc:' + String(d.lng_reported) + '+' + String(d.lat_reported) +"\" target=\"_blank\">Map</a>"},
     ]);
 };
 

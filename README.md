@@ -4,6 +4,8 @@ Prototype of analysis and visualization platform for Participatory Surveillance 
 
 Live version available [here](https://spalladino.github.io/mgviz-dc).
 
+![Preview](./preview.png)
+
 ## Build & development
 
 ```

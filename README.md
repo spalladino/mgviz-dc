@@ -30,7 +30,7 @@ grunt serve
 
 * Philip Abdelmalik
 * Oswaldo Cruz
-* Manik Ponnaiah
+* Manickam Ponnaiah
 * Dan Todkill
 * Thomas Mollet
 * Anna Karpushkina
